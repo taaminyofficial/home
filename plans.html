@@ -1,0 +1,1854 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>تأميني | قارن تأمين السيارات في السعودية</title>
+<meta name="description" content="قارن عروض أفضل شركات التأمين في السعودية، واختر تغطية سيارتك المناسبة وأصدر وثيقتك بسهولة." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet" />
+<style>
+/* ============ الأساسيات ============ */
+:root{
+  --bg:#f6f8fa; --fg:#0e1b2a; --muted:#5b6b7c;
+  --primary:#0fa295; --primary-dark:#0b8177; --primary-soft:#e3f7f4;
+  --border:#e4e9ef; --card:#ffffff;
+  --shadow-sm:0 2px 10px rgba(14,27,42,.06);
+  --shadow-md:0 16px 38px -16px rgba(14,27,42,.22);
+  --ease:cubic-bezier(.2,.7,.3,1);
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0; font-family:'Tajawal',system-ui,sans-serif; background:var(--bg); color:var(--fg);
+  line-height:1.65; -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+button{font-family:inherit;}
+h1,h2,h3,p{margin:0;} ul{margin:0;padding:0;list-style:none;}
+.section-wrap{max-width:1180px;margin-inline:auto;padding-inline:1.5rem;}
+.hidden{display:none !important;}
+
+/* ============ الأزرار ============ */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+  border:none;border-radius:12px;font-weight:700;cursor:pointer;
+  transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s var(--ease);
+  will-change:transform;
+}
+.btn svg{width:18px;height:18px;}
+.btn-primary{background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:#fff;box-shadow:0 10px 22px -10px rgba(15,162,149,.75);}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 18px 32px -12px rgba(15,162,149,.85);}
+.btn-primary:active{transform:translateY(-1px) scale(.98);}
+.btn-outline{background:#fff;color:var(--fg);border:1px solid var(--border);box-shadow:var(--shadow-sm);}
+.btn-outline:hover{background:var(--primary);color:#fff;border-color:transparent;transform:translateY(-2px);}
+.btn-sm{height:38px;padding:0 1.1rem;font-size:.85rem;}
+.btn-md{height:46px;padding:0 1.5rem;font-size:.95rem;width:100%;}
+.btn-lg{height:56px;padding:0 2rem;font-size:1.1rem;border-radius:16px;width:100%;}
+.icon-btn{width:40px;height:40px;border-radius:12px;border:1px solid transparent;background:transparent;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;color:var(--fg);transition:background .25s,color .25s,transform .25s;}
+.icon-btn:hover{background:var(--primary-soft);color:var(--primary-dark);transform:translateY(-2px);}
+.icon-btn svg{width:20px;height:20px;}
+
+/* ============ الهيدر ============ */
+.site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);transition:box-shadow .3s;}
+.topbar{max-width:1180px;margin-inline:auto;padding:.7rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;}
+.brand{display:flex;align-items:center;gap:.6rem;font-weight:900;font-size:1.25rem;letter-spacing:-.5px;cursor:pointer;}
+.brand img{height:36px;width:auto;transition:transform .4s var(--ease);}
+.brand:hover img{transform:rotate(-8deg) scale(1.08);}
+.topbar-actions{display:flex;align-items:center;gap:.4rem;}
+.login-button{position:relative;overflow:hidden;}
+.login-button::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.45),transparent 70%);transform:translateX(-120%);transition:transform .7s var(--ease);}
+.login-button:hover::after{transform:translateX(120%);}
+
+.main-nav{max-width:1180px;margin-inline:auto;padding:0 1.5rem .6rem;display:flex;gap:.4rem;align-items:center;}
+.main-nav a{display:inline-flex;align-items:center;gap:.45rem;padding:.5rem .9rem;border-radius:10px;font-weight:600;font-size:.92rem;color:var(--muted);transition:background .25s,color .25s,transform .25s;}
+.main-nav a svg{width:18px;height:18px;}
+.main-nav a:hover{background:var(--primary-soft);color:var(--primary-dark);transform:translateY(-2px);}
+.main-nav a.nav-active{background:var(--primary-soft);color:var(--primary-dark);}
+
+/* ============ الهيرو ============ */
+.hero-band{position:relative;overflow:hidden;color:#fff;background:radial-gradient(130% 130% at 82% 0%,#16b8a6 0%,#0e7d72 42%,#083f3b 100%);}
+.hero-band::before{content:"";position:absolute;inset:-60%;pointer-events:none;background:radial-gradient(circle at 28% 30%,rgba(255,255,255,.16),transparent 38%),radial-gradient(circle at 72% 68%,rgba(255,255,255,.10),transparent 42%);animation:heroGlow 14s ease-in-out infinite alternate;}
+@keyframes heroGlow{from{transform:translate3d(-3%,-2%,0) scale(1);}to{transform:translate3d(3%,2%,0) scale(1.1);}}
+.hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:3rem;align-items:center;padding-block:3.75rem;}
+.hero-copy{max-width:560px;}
+.hero-kicker{display:inline-flex;align-items:center;gap:.5rem;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);padding:.4rem .9rem;border-radius:999px;font-size:.85rem;font-weight:600;backdrop-filter:blur(6px);animation:fadeUp .8s var(--ease) both;}
+.hero-kicker svg{width:17px;height:17px;}
+.hero-copy h1{font-size:clamp(1.9rem,4.2vw,3.1rem);font-weight:900;line-height:1.22;margin:.9rem 0 .9rem;letter-spacing:-1px;animation:fadeUp .8s .1s var(--ease) both;}
+.hero-description{font-size:1.05rem;color:rgba(255,255,255,.86);max-width:480px;animation:fadeUp .8s .2s var(--ease) both;}
+.hero-cta{margin-top:1.6rem;background:#fff;color:var(--primary-dark);box-shadow:0 16px 32px -14px rgba(0,0,0,.55);position:relative;animation:fadeUp .8s .3s var(--ease) both;}
+.hero-cta::before{content:"";position:absolute;inset:0;border-radius:inherit;box-shadow:0 0 0 0 rgba(255,255,255,.55);animation:pulseRing 2.6s ease-out infinite;}
+.hero-cta:hover{transform:translateY(-4px) scale(1.02);background:#fff;color:var(--primary-dark);}
+@keyframes pulseRing{0%{box-shadow:0 0 0 0 rgba(255,255,255,.5);}70%{box-shadow:0 0 0 18px rgba(255,255,255,0);}100%{box-shadow:0 0 0 0 rgba(255,255,255,0);}}
+.hero-art-wrap{display:flex;justify-content:center;align-items:center;}
+.hero-art{width:100%;max-width:520px;border-radius:24px;filter:drop-shadow(0 30px 45px rgba(0,0,0,.45));animation:floatHero 6.5s ease-in-out infinite;}
+@keyframes floatHero{0%,100%{transform:translateY(0) rotate(0deg);}50%{transform:translateY(-16px) rotate(-.6deg);}}
+
+/* ============ شريط الشركات ============ */
+.insurer-strip{background:#fff;border-bottom:1px solid var(--border);padding:1.6rem 0 1.2rem;}
+.logo-marquee {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+}
+.logo-track {
+  display: flex;
+  width: max-content;
+  gap: 0.75rem;
+  animation: marquee 25s linear infinite;
+  animation-play-state: running !important;
+}
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.logo-track > div {
+  height: 44px;
+  width: 64px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #fff;
+  padding: 6px;
+  transition: transform .3s var(--ease);
+}
+.logo-track > div:hover {
+  transform: scale(1.08);
+}
+.logo-track img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+.insurer-strip p{text-align:center;color:var(--muted);font-size:.9rem;margin-top:1.1rem;font-weight:500;}
+
+/* ============ العروض ============ */
+.campaigns-section{padding-block:4.5rem;}
+.section-overline{color:var(--primary);font-weight:800;font-size:.85rem;letter-spacing:.5px;margin-bottom:.4rem;display:inline-block;}
+.section-title{font-size:clamp(1.5rem,3vw,2.15rem);font-weight:900;line-height:1.3;letter-spacing:-.6px;margin-bottom:.6rem;}
+.section-subtitle{color:var(--muted);font-size:1rem;}
+.campaign-title{max-width:760px;margin-bottom:2rem;}
+.campaign-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+.campaign{display:block;border-radius:var(--radius);overflow:hidden;background:#fff;box-shadow:var(--shadow-sm);cursor:pointer;transition:transform .35s var(--ease),box-shadow .35s var(--ease);}
+.campaign:hover{transform:translateY(-8px);box-shadow:var(--shadow-md);}
+.campaign img{width:100%;height:auto;animation:floatSm 5.5s ease-in-out infinite;}
+.campaign-main{grid-column:1 / -1;}
+
+/* ============ المنتجات ============ */
+.products-section{padding-block:2rem 4.5rem;}
+.section-heading-row{display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;margin-bottom:2rem;flex-wrap:wrap;}
+.product-tabs{display:inline-flex;background:#fff;border:1px solid var(--border);border-radius:999px;padding:.3rem;box-shadow:var(--shadow-sm);}
+.product-tab{border:none;background:transparent;padding:.5rem 1.3rem;border-radius:999px;font-weight:700;font-size:.9rem;color:var(--muted);cursor:pointer;transition:background .3s,color .3s;}
+.product-tab.tab-active{background:var(--primary);color:#fff;box-shadow:0 8px 18px -8px rgba(15,162,149,.8);}
+
+.product-scroll-container {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  padding-inline: 1.5rem;
+  margin-inline: -1.5rem;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.product-scroll-container::-webkit-scrollbar { display: none; }
+
+.product-card {
+  flex: 0 0 210px;
+  scroll-snap-align: start;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+  cursor: pointer;
+}
+.product-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+.product-title { font-weight: 800; font-size: 1.15rem; color: var(--fg); margin: 0; }
+.btn-start {
+  background: #fff; color: var(--primary); font-weight: 700; padding: 0.4rem 1rem; border-radius: 8px; border: none; font-size: 0.85rem; width: fit-content; display: flex; align-items: center; gap: 0.4rem; transition: 0.3s; box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.btn-start:hover { background: var(--primary); color: #fff; }
+.btn-start svg { width: 16px; height: 16px; }
+.product-card img {
+  width: 100%; height: 120px; object-fit: contain; margin-top: auto; border-radius: 8px;
+}
+
+.product-blue { background: #f0f7ff; border-color: #d0e3ff; }
+.product-blue .btn-start { color: #2563eb; } .product-blue .btn-start:hover { background: #2563eb; color: #fff;}
+.product-teal { background: #f0fdf4; border-color: #d1fae5; }
+.product-teal .btn-start { color: #0fa295; } .product-teal .btn-start:hover { background: #0fa295; color: #fff;}
+.product-coral { background: #fef2f2; border-color: #fee2e2; }
+.product-coral .btn-start { color: #f2683c; } .product-coral .btn-start:hover { background: #f2683c; color: #fff;}
+.product-green { background: #f0fdf4; border-color: #bbf7d0; }
+.product-green .btn-start { color: #3fa72f; } .product-green .btn-start:hover { background: #3fa72f; color: #fff;}
+
+/* ============ التغطيات ============ */
+.coverage-section{padding-block:3rem 4.5rem;}
+.center-heading{text-align:center;max-width:720px;margin-inline:auto;margin-bottom:2.5rem;}
+.coverage-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;align-items:stretch;}
+.coverage-card{position:relative;background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:1.9rem 1.6rem 2.2rem;box-shadow:var(--shadow-sm);transition:transform .35s var(--ease),box-shadow .35s var(--ease),border-color .35s;display:flex;flex-direction:column;}
+.coverage-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-md);border-color:rgba(15,162,149,.35);}
+.coverage-featured{background:linear-gradient(170deg,#ffffff,#effcf9);border-color:var(--primary);box-shadow:0 26px 50px -26px rgba(15,162,149,.6);}
+.coverage-card-top{display:flex;align-items:center;justify-content:space-between;gap:.6rem;margin-bottom:1rem;flex-wrap:wrap;}
+.coverage-tag{font-size:.75rem;font-weight:800;padding:.28rem .75rem;border-radius:999px;background:var(--primary-soft);color:var(--primary-dark);}
+.coverage-featured .coverage-tag{background:var(--primary);color:#fff;}
+.coverage-best{display:inline-flex;align-items:center;gap:.3rem;font-size:.75rem;font-weight:700;color:#b8860b;}
+.coverage-best svg{width:35px;height:35px;}
+.coverage-card h3{font-size:1.5rem;font-weight:900;letter-spacing:-.5px;}
+.coverage-detail{color:var(--primary-dark);font-weight:700;font-size:.9rem;margin-top:.15rem;}
+.coverage-description{color:var(--muted);font-size:.92rem;margin:.7rem 0 1.3rem;}
+.coverage-cta{align-self:flex-start;margin-bottom:1.3rem;}
+.coverage-card ul{display:flex;flex-direction:column;gap:.6rem;margin-top:.2rem;}
+.coverage-card ul li{display:flex;align-items:flex-start;gap:.55rem;font-size:.9rem;color:#33465a;}
+.coverage-card ul li svg{width:17px;height:17px;flex-shrink:0;color:var(--primary);margin-top:.18rem;}
+.coverage-index{position:absolute;bottom:.6rem;left:1rem;font-size:2.4rem;font-weight:900;color:rgba(14,27,42,.05);pointer-events:none;}
+
+/* ============ لماذا تأميني ============ */
+.why-section{background:linear-gradient(160deg,#0b2433,#0c1b2a 60%);color:#fff;padding-block:4.5rem;position:relative;overflow:hidden;}
+.why-section::after{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(15,162,149,.35),transparent 65%);top:-220px;left:-160px;filter:blur(20px);pointer-events:none;}
+.why-inner{display:grid;grid-template-columns:.9fr 1.1fr;gap:3.5rem;align-items:center;position:relative;z-index:1;}
+.why-heading .section-overline{color:#4fd6c7;}
+.why-heading .section-title{color:#fff;}
+.why-lede{color:rgba(255,255,255,.7);margin-bottom:1.8rem;}
+.why-heading img{width:130px;height:auto;animation:floatSm 6s ease-in-out infinite;filter:drop-shadow(0 12px 20px rgba(0,0,0,.5));}
+.why-points{display:flex;flex-direction:column;}
+.why-point{display:flex;align-items:center;gap:1.2rem;padding:1.35rem 0;border-bottom:1px solid rgba(255,255,255,.13);transition:padding-inline-start .35s var(--ease),background .35s;}
+.why-point:last-child{border-bottom:none;}
+.why-point:hover{padding-inline-start:.6rem;}
+.why-number{font-size:1rem;font-weight:900;color:#0c1b2a;background:linear-gradient(135deg,#4fd6c7,#16b8a6);width:42px;height:42px;border-radius:12px;display:grid;place-items:center;flex-shrink:0;transition:transform .35s var(--ease);}
+.why-point:hover .why-number{transform:rotate(-8deg) scale(1.08);}
+.why-point h3{font-size:1.15rem;font-weight:800;margin-bottom:.15rem;}
+.why-point p{color:rgba(255,255,255,.66);font-size:.9rem;}
+.why-point > svg{width:22px;height:22px;margin-inline-start:auto;color:rgba(255,255,255,.35);transition:transform .35s var(--ease),color .35s;}
+.why-point:hover > svg{transform:translate(-4px,-4px);color:#4fd6c7;}
+
+/* ============ الأسئلة الشائعة ============ */
+.faq-section{display:grid;grid-template-columns:.85fr 1.15fr;gap:3.5rem;padding-block:4.5rem;}
+.faq-intro p{color:var(--muted);margin-bottom:1.4rem;font-size:.95rem;}
+.support-number{display:inline-flex;align-items:center;gap:.55rem;font-weight:800;font-size:1.1rem;color:var(--primary-dark);background:var(--primary-soft);padding:.7rem 1.2rem;border-radius:14px;transition:transform .3s,background .3s;}
+.support-number:hover{transform:translateY(-3px);background:#d3f2ed;}
+.support-number svg{width:22px;height:22px;}
+.faq-list{display:flex;flex-direction:column;}
+.faq-item{border-bottom:1px solid var(--border);}
+.faq-trigger{width:100%;background:none;border:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.15rem 0;font-size:1rem;font-weight:700;color:var(--fg);text-align:right;transition:color .25s;}
+.faq-trigger:hover{color:var(--primary-dark);}
+.faq-trigger svg{width:20px;height:20px;flex-shrink:0;color:var(--muted);transition:transform .35s var(--ease),color .35s;}
+.faq-item.open .faq-trigger{color:var(--primary-dark);}
+.faq-item.open .faq-trigger svg{transform:rotate(180deg);color:var(--primary);}
+.faq-content{max-height:0;overflow:hidden;transition:max-height .4s var(--ease),opacity .35s;opacity:0;}
+.faq-item.open .faq-content{opacity:1;}
+.faq-content p{padding-bottom:1.2rem;color:var(--muted);font-size:.93rem;line-height:1.8;}
+
+/* ============ الفوتر ============ */
+.site-footer{background:#0a1725;color:#c2ceda;margin-top:1rem;}
+.footer-main{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.3fr;gap:2.5rem;padding-block:3.5rem 2.5rem;}
+.footer-brand{color:#fff;margin-bottom:1rem;}
+.footer-brand-block p{font-size:.92rem;color:#8fa3b7;max-width:280px;}
+.footer-license{display:flex;align-items:flex-start;gap:.5rem;margin-top:1.3rem;font-size:.8rem;color:#7d92a6;}
+.footer-license svg{width:17px;height:17px;flex-shrink:0;color:#4fd6c7;margin-top:.15rem;}
+.footer-column h3,.footer-apps h3{color:#fff;font-size:1rem;font-weight:800;margin-bottom:1rem;}
+.footer-column{display:flex;flex-direction:column;gap:.7rem;}
+.footer-column a{font-size:.9rem;color:#8fa3b7;width:fit-content;transition:color .25s,transform .25s;}
+.footer-column a:hover{color:#4fd6c7;transform:translateX(-4px);}
+.footer-apps p{font-size:.9rem;color:#8fa3b7;margin-bottom:1rem;}
+.app-badges{display:flex;flex-wrap:wrap;gap:.6rem;}
+.app-badges img{height:38px;width:auto;transition:transform .3s;}
+.app-badges a:hover img{transform:translateY(-3px) scale(1.04);}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding-block:1.3rem;border-top:1px solid rgba(255,255,255,.09);font-size:.82rem;color:#6f8499;}
+
+/* ============ صفحة النماذج (Multi-Step) ============ */
+.form-page {min-height: calc(100vh - 120px); display:flex; flex-direction:column; padding-bottom: 120px;}
+.step-header {text-align:center; padding: 2rem 1rem 1rem;}
+.step-indicator {display:flex; justify-content:center; gap:2rem; margin-top:1rem; position:relative;}
+.step-indicator::before {content:''; position:absolute; top:12px; left:15%; right:15%; height:2px; background:var(--border); z-index:1;}
+.step-dot {position:relative; z-index:2; display:flex; flex-direction:column; align-items:center; gap:.4rem; font-size:.8rem; font-weight:700; color:var(--muted);}
+.step-dot .circle {width:26px; height:26px; border-radius:50%; background:var(--border); display:grid; place-items:center; transition:.3s;}
+.step-dot.active {color:var(--primary);}
+.step-dot.active .circle {background:var(--primary); box-shadow:0 0 0 4px var(--primary-soft); color: #fff;}
+.step-dot.completed .circle {background:var(--primary); color:#fff;}
+
+.form-container {max-width:600px; margin:0 auto; width:100%; padding: 0 1.5rem;}
+.form-group {margin-bottom: 1.5rem;}
+.form-label {display:block; font-weight:700; margin-bottom:.6rem; font-size:1rem; color:var(--fg);}
+
+/* تنسيق جديد للإنبوتات مع علامة الصح */
+.form-input-wrap { position: relative; }
+.form-control {width:100%; height:60px; border-radius:14px; border:1.5px solid var(--border); padding:0 3rem 0 1.2rem; font-family:inherit; font-size:1.1rem; background:#fff; transition:border .3s, box-shadow .3s; outline:none;}
+.form-control:focus {border-color:var(--primary); box-shadow:0 0 0 4px var(--primary-soft);}
+.form-control.is-invalid {border-color: #dc2626; background-color: #fef2f2;}
+.form-control.is-valid {border-color: #16a34a; background-color: #f0fdf4;}
+
+.check-icon {
+  position: absolute; left: 1.2rem; top: 50%; transform: translateY(-50%);
+  width: 22px; height: 22px; color: #16a34a; opacity: 0; pointer-events: none; transition: opacity 0.3s;
+}
+.form-control.is-valid ~ .check-icon { opacity: 1; }
+
+.error-text {color: #dc2626; font-size: .85rem; margin-top: .4rem; display:none; font-weight: 500;}
+.form-control.is-invalid + .error-text {display:block;}
+
+/* تنسيق السويتشات (Toggles) */
+.toggle-group { display: flex; gap: 0.5rem; background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 0.3rem; }
+.toggle-btn { flex: 1; border: none; background: transparent; padding: 0.8rem; border-radius: 10px; font-family: inherit; font-size: 0.95rem; font-weight: 700; color: var(--muted); cursor: pointer; transition: 0.3s; }
+.toggle-btn.active { background: #0056b3; color: #fff; box-shadow: 0 4px 10px rgba(0,86,179,0.2); }
+
+/* الأزرار الثابتة */
+.fixed-bottom-bar {position:fixed; bottom:0; left:0; right:0; background:#fff; padding:1rem 1.5rem; box-shadow:0 -4px 20px rgba(0,0,0,.05); z-index:100; display:flex; justify-content:center; gap: 1rem;}
+.fixed-bottom-bar .btn {flex: 1; max-width: 300px;}
+
+/* ============ صفحة الأسعار ============ */
+.quotes-page {padding: 1rem 0 120px; background: #f4f7f9; min-height: 100vh;}
+.quote-card {background:#fff; border-radius:20px; padding:1.5rem; margin-bottom:1.2rem; box-shadow:var(--shadow-sm); border:1px solid var(--border); display:flex; flex-direction:column; gap:1rem; position:relative; overflow:hidden;}
+/* كارت العرض الأول (اللمعة) */
+.promo-card {
+  border: 2px solid #0056b3; 
+  box-shadow: 0 10px 30px rgba(0,86,179,.15);
+  position: relative; 
+  overflow: hidden;
+}
+.promo-card::after {
+  content: ''; position: absolute; top: 0; left: -100%; width: 50%; height: 100%;
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 100%);
+  transform: skewX(-25deg);
+  animation: shine 8s infinite;
+  pointer-events: none;
+}
+@keyframes shine {
+  0% { left: -100%; }
+  40% { left: 200%; }
+  100% { left: 200%; }
+}
+
+.promo-header {
+  background: #0056b3; color: #fff; padding: 0.6rem 1rem; margin: -1.5rem -1.5rem 1rem -1.5rem; 
+  display: flex; justify-content: space-between; align-items: center; font-size: 0.9rem; font-weight: 700;
+}
+
+/* زرار الخصم (الرجفة) */
+.promo-badge {
+  background: #dc2626; color: #fff; padding: 0.2rem 0.8rem; border-radius: 99px; font-size: 0.8rem;
+  display: inline-block;
+  animation: wiggle 2.5s ease-in-out infinite;
+}
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-6deg); }
+  75% { transform: rotate(6deg); }
+}
+.timer-bar {background: rgba(220, 38, 38, 0.08); border-radius: 12px; padding: 0.5rem 1rem; display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;}
+.timer-text {color: #dc2626; font-weight: 700; font-size: 0.85rem;}
+.timer-digits {display: flex; gap: 0.3rem; direction: ltr;}
+.timer-digit {background: #dc2626; color: #fff; padding: 0.2rem 0.5rem; border-radius: 6px; font-weight: 800; font-size: 0.9rem;}
+
+.quote-header {display:flex; justify-content:space-between; align-items:center; margin-bottom: 0.5rem;}
+.quote-logo-wrap {display: flex; align-items: center; gap: 0.8rem;}
+.quote-logo-img {height: 50px; width: 60px; object-fit: contain; background: #f8f9fa; border-radius: 12px; padding: 0.3rem;}
+.quote-company-name {font-weight: 800; font-size: 1.1rem; color: var(--fg); display: block;}
+.quote-type-badge {background: #e3f7f4; color: var(--primary-dark); padding: 0.2rem 0.6rem; border-radius: 99px; font-size: 0.75rem; font-weight: 700; display: inline-block; margin-top: 0.2rem;}
+
+.quote-features {font-size:.9rem; color:var(--fg); line-height:1.8; margin-top: 0.5rem;}
+.quote-features li {display: flex; gap: 0.4rem; align-items: flex-start; margin-bottom: 0.3rem;}
+.quote-features .main-feature {background: #f0f7ff; padding: 0.5rem; border-radius: 8px; font-weight: 600; color: #0056b3;}
+.quote-features .sub-feature {color: var(--muted); font-size: 0.85rem;}
+
+.quote-footer {display: flex; justify-content: space-between; align-items: flex-end; border-top: 1px solid var(--border); padding-top: 1rem; margin-top: 0.5rem;}
+.quote-price {text-align: left;}
+.quote-price .old {text-decoration:line-through; color:var(--muted); font-size:.85rem;}
+.quote-price .new {font-size:1.8rem; font-weight:900; color:#0056b3;}
+.quote-price .tax {font-size:.75rem; color:var(--muted);}
+.btn-select-offer {background: #0056b3; color: #fff; border: none; padding: 0.8rem 2rem; border-radius: 12px; font-weight: 700; font-size: 1rem; cursor: pointer; transition: 0.3s;}
+.btn-select-offer:hover {background: #004494; transform: scale(1.02);}
+
+/* ============ تصميم صفحة الملخص (Step 4) ============ */
+.summary-top-card {
+  background: linear-gradient(135deg, #0056b3, #003d82);
+  color: #fff; border-radius: 16px; padding: 1.5rem; margin-bottom: 1rem;
+  box-shadow: 0 10px 20px rgba(0,86,179,0.2);
+}
+.summary-top-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; }
+.summary-top-company h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 0.2rem; }
+.summary-top-company p { font-size: 0.85rem; color: #a0c4ff; }
+.summary-top-header img { height: 40px; background: #fff; padding: 4px; border-radius: 8px; }
+.summary-top-feature { background: rgba(255,255,255,0.15); border-radius: 8px; padding: 0.8rem; display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; }
+.summary-top-feature svg { width: 18px; height: 18px; }
+
+.summary-card {
+  background: #fff; border-radius: 16px; padding: 1.5rem; margin-bottom: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.03); border: 1px solid var(--border);
+}
+.summary-card-title { font-size: 1rem; font-weight: 800; color: #0056b3; margin-bottom: 1rem; }
+.summary-row { display: flex; justify-content: space-between; padding: 0.6rem 0; border-bottom: 1px dashed #eef2f6; font-size: 0.95rem; }
+.summary-row:last-child { border-bottom: none; }
+.summary-row span { color: #5b6b7c; }
+.summary-row strong { font-weight: 700; color: #0e1b2a; }
+.total-row { border-top: 2px solid #eef2f6; border-bottom: none; margin-top: 0.5rem; padding-top: 1rem; font-size: 1.1rem; }
+.total-row strong { color: #0056b3; font-size: 1.3rem; }
+
+/* ============ شاشة التحميل ============ */
+#loading-screen {position:fixed; inset:0; background:#0066cc; z-index:9999; display:flex; flex-direction:column; align-items:center; justify-content:center; color:#fff; opacity:0; pointer-events:none; transition:opacity .3s;}
+#loading-screen.active {opacity:1; pointer-events:all;}
+.loader-logo {width:80px; height:80px; background:#fff; border-radius:20px; display:grid; place-items:center; margin-bottom:1.5rem; animation:bounce 1s infinite alternate;}
+.loader-logo svg {width:50px; height:50px; color:#0066cc;}
+.loader-text {font-size:2rem; font-weight:900; margin-bottom:1.5rem;}
+.loader-dots {display:flex; gap:.5rem;}
+.loader-dot {width:12px; height:12px; border-radius:50%; background:rgba(255,255,255,.5); animation:pulseDot 1.4s infinite ease-in-out both;}
+.loader-dot:nth-child(1) {animation-delay:-.32s;} .loader-dot:nth-child(2) {animation-delay:-.16s;} .loader-dot:nth-child(3) {animation-delay:0s;}
+@keyframes bounce {from{transform:translateY(0);} to{transform:translateY(-10px);}}
+@keyframes pulseDot {0%,80%,100%{transform:scale(0); opacity:0.3;} 40%{transform:scale(1); opacity:1;}}
+
+/* ============ حركات ============ */
+@keyframes floatSm{0%,100%{transform:translateY(0);}50%{transform:translateY(-9px);}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(26px);}to{opacity:1;transform:translateY(0);}}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .75s var(--ease),transform .75s var(--ease);transition-delay:var(--d,0s);will-change:opacity,transform;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;}.reveal{opacity:1;transform:none;}}
+
+/* ============ Chat Widget ============ */
+#chat-widget-container {
+  position: fixed; bottom: 24px; left: 24px; z-index: 9999;
+  display: flex; flex-direction: column; align-items: flex-start; gap: 1rem;
+}
+.chat-fab {
+  width: 60px; height: 60px; border-radius: 50%; background: #0056b3; color: #fff;
+  border: none; display: grid; place-items: center; cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0,86,179,0.3); transition: 0.3s;
+}
+.chat-fab:hover { transform: scale(1.05); }
+.chat-fab svg { width: 28px; height: 28px; }
+
+.chat-window {
+  width: 360px; height: 500px; background: #f8fbff; border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15); display: flex; flex-direction: column;
+  overflow: hidden; border: 1px solid #e0eaff;
+}
+.chat-header {
+  background: #0056b3; color: #fff; padding: 1rem; display: flex; justify-content: space-between; align-items: center;
+}
+.chat-header-info { display: flex; align-items: center; gap: 0.8rem; }
+.chat-header-icon { width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.2); display: grid; place-items: center; }
+.chat-header-icon svg { width: 24px; height: 24px; }
+.chat-header-text h4 { margin: 0; font-size: 1rem; }
+.chat-header-text span { font-size: 0.75rem; color: #a0c4ff; display: flex; align-items: center; gap: 0.3rem; }
+.status-dot { width: 8px; height: 8px; border-radius: 50%; background: #4ade80; animation: blinkDot 1.5s infinite; }
+@keyframes blinkDot { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+.chat-close { background: none; border: none; color: #fff; font-size: 1.5rem; cursor: pointer; }
+
+.chat-body { flex: 1; padding: 1rem; overflow-y: auto; display: flex; flex-direction: column; gap: 1rem; }
+.chat-welcome { background: #e0f2fe; padding: 1rem; border-radius: 12px; color: #0056b3; font-size: 0.9rem; font-weight: 600; text-align: center; }
+.chat-form-group { margin-top: 1rem; }
+.chat-form-group label { display: block; font-weight: 700; font-size: 0.85rem; margin-bottom: 0.3rem; color: #333; }
+.chat-form-group input { width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid #cce0ff; outline: none; font-family: inherit; }
+.chat-form-group input:focus { border-color: #0056b3; }
+.start-chat-btn { width: 100%; margin-top: 1rem; padding: 0.9rem; background: #0056b3; color: #fff; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; transition: 0.3s; }
+.start-chat-btn:hover { background: #004494; }
+
+.chat-messages { display: flex; flex-direction: column; gap: 0.8rem; }
+.chat-bubble { max-width: 80%; padding: 0.7rem 1rem; border-radius: 12px; font-size: 0.9rem; line-height: 1.5; }
+.chat-bubble.user { background: #0056b3; color: #fff; align-self: flex-start; border-bottom-right-radius: 4px; }
+.chat-bubble.bot { background: #fff; color: #333; align-self: flex-end; border-bottom-left-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+
+.chat-loading { display: flex; align-items: center; justify-content: center; gap: 0.5rem; color: #0056b3; font-size: 0.85rem; font-weight: 600; margin-top: auto; padding: 0.5rem; }
+.spinner { width: 16px; height: 16px; border: 2px solid #cce0ff; border-top-color: #0056b3; border-radius: 50%; animation: spin 1s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.chat-footer { padding: 0.8rem; background: #fff; border-top: 1px solid #e0eaff; display: flex; gap: 0.5rem; }
+.chat-footer input { flex: 1; padding: 0.7rem; border-radius: 20px; border: 1px solid #cce0ff; outline: none; font-family: inherit; }
+.chat-footer input:focus { border-color: #0056b3; }
+.send-btn { width: 40px; height: 40px; border-radius: 50%; background: #0056b3; color: #fff; border: none; display: grid; place-items: center; cursor: pointer; transition: 0.3s; }
+.send-btn:hover { background: #004494; }
+.send-btn svg { width: 18px; height: 18px; }
+
+/* Success Toast */
+.toast-msg {
+  position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
+  background: #dcfce7; color: #166534; padding: 1rem 1.5rem; border-radius: 12px;
+  font-weight: 700; box-shadow: 0 4px 15px rgba(0,0,0,0.1); display: flex; align-items: center; gap: 0.5rem; z-index: 10000;
+  animation: slideDown 0.3s ease-out;
+}
+@keyframes slideDown { from { top: -50px; opacity: 0; } to { top: 20px; opacity: 1; } }
+
+/* ============ استجابة ============ */
+@media (max-width:960px){
+  .hero-inner{grid-template-columns:1fr;gap:2.5rem;text-align:center;}
+  .hero-copy{max-width:none;margin-inline:auto;}
+  .hero-description{margin-inline:auto;}
+  .hero-art-wrap{order:-1;}
+  .hero-art{max-width:420px;}
+  .campaign-grid{grid-template-columns:repeat(2,1fr);}
+  .campaign-main{grid-column:1 / -1;}
+  .coverage-grid{grid-template-columns:1fr;}
+  .why-inner{grid-template-columns:1fr;gap:2.5rem;}
+  .faq-section{grid-template-columns:1fr;gap:2rem;}
+  .footer-main{grid-template-columns:1fr 1fr;}
+  .main-nav{display:none;}
+  .main-nav.open{display:flex;flex-direction:column;align-items:stretch;padding:0 1.5rem 1rem;}
+  .mobile-menu-button{display:inline-flex;}
+}
+@media (min-width:961px){
+  .mobile-menu-button{display:none;}
+}
+@media (max-width:560px){
+  .campaign-grid{grid-template-columns:1fr;}
+  .footer-main{grid-template-columns:1fr;}
+  .hero-inner{padding-block:2.5rem;}
+  .brand span{font-size:1.1rem;}
+  .step-indicator {gap: 1rem;}
+  .step-dot span {font-size: 0.7rem;}
+  .promo-header {flex-direction: column; gap: 0.5rem; align-items: flex-start;}
+  .fixed-bottom-bar { flex-direction: column; }
+  .fixed-bottom-bar .btn { max-width: 100%; }
+  .chat-window { width: calc(100vw - 40px); left: 20px; }
+}
+</style>
+</head>
+<body id="top">
+
+<!-- شاشة التحميل -->
+<div id="loading-screen">
+  <div class="loader-logo">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+  </div>
+  <div class="loader-text">تأميني</div>
+  <div class="loader-dots">
+    <div class="loader-dot"></div><div class="loader-dot"></div><div class="loader-dot"></div>
+  </div>
+</div>
+
+<!-- ============ Chat Widget ============ -->
+<div id="chat-widget-container">
+  <button class="chat-fab" onclick="toggleChat()">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+  </button>
+  
+  <div id="chat-window" class="chat-window hidden">
+    <div class="chat-header">
+      <div class="chat-header-info">
+        <div class="chat-header-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        </div>
+        <div class="chat-header-text">
+          <h4>خدمة العملاء</h4>
+          <span><span class="status-dot"></span> متصل الآن</span>
+        </div>
+      </div>
+      <button class="chat-close" onclick="toggleChat()">&times;</button>
+    </div>
+    
+    <div class="chat-body" id="chat-body">
+      <div id="chat-welcome">
+        <p class="chat-welcome">مرحبًا بك! 👋 أدخل اسمك ورقم جوالك لبدء المحادثة مع فريق الدعم</p>
+        <div class="chat-form-group">
+          <label>الاسم</label>
+          <input type="text" id="chat-name" placeholder="اسمك الكريم">
+        </div>
+        <div class="chat-form-group">
+          <label>رقم الجوال</label>
+          <input type="tel" id="chat-phone" placeholder="05xxxxxxxx">
+        </div>
+        <button class="start-chat-btn" onclick="startChat()">بدء المحادثة</button>
+      </div>
+      
+      <div id="chat-messages" class="chat-messages hidden"></div>
+      
+      <div id="chat-loading" class="chat-loading hidden">
+        <div class="spinner"></div>
+        <span>من فضلك الانتظار، يتم التحقق من أحد ممثلي الخدمة...</span>
+      </div>
+    </div>
+    
+    <div class="chat-footer hidden" id="chat-footer">
+      <button class="send-btn" onclick="sendChatMessage()">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+      </button>
+      <input type="text" id="chat-input" placeholder="اكتب رسالتك..." onkeypress="handleChatEnter(event)">
+    </div>
+  </div>
+</div>
+
+<!-- ============ الصفحة الرئيسية ============ -->
+<div id="page-home" class="page-view">
+  <header class="site-header">
+    <div class="topbar">
+      <a class="brand" onclick="navigateTo('home')">
+        <img src="assets/tameeni-icon-BHVui6sK.svg" alt="تأميني" />
+        <span>تأميني</span>
+      </a>
+      <div class="topbar-actions">
+        <button class="btn btn-primary btn-sm login-button"><span>الدخول لحسابي</span></button>
+        <button class="icon-btn" aria-label="اختيار اللغة" title="اختيار اللغة">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.54 15H17a2 2 0 0 0-2 2v4.54"/><path d="M7 3.34V5a3 3 0 0 0 3 3a2 2 0 0 1 2 2c0 1.1.9 2 2 2a2 2 0 0 0 2-2c0-1.1.9-2 2-2h3.17"/><path d="M11 21.95V18a2 2 0 0 0-2-2a2 2 0 0 1-2-2v-1a2 2 0 0 0-2-2H2.05"/><circle cx="12" cy="12" r="10"/></svg>
+        </button>
+        <button class="icon-btn mobile-menu-button" aria-label="فتح القائمة">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <nav class="main-nav" aria-label="التنقل الرئيسي">
+      <a class="nav-active" href="#products">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21 8-2 2-1.5-3.7A2 2 0 0 0 15.646 5H8.4a2 2 0 0 0-1.903 1.257L5 10 3 8"/><path d="M7 14h.01"/><path d="M17 14h.01"/><rect width="18" height="8" x="3" y="10" rx="2"/><path d="M5 18v2"/><path d="M19 18v2"/></svg>
+        السيارات
+      </a>
+      <a href="#products">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg>
+        الصحي
+      </a>
+      <a href="#products">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg>
+        الإقامة المميزة
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero-band" aria-labelledby="hero-title">
+      <div class="hero-inner section-wrap">
+        <div class="hero-copy">
+          <p class="hero-kicker">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+            منصة التأمين الأولى في المملكة
+          </p>
+          <h1 id="hero-title">أول منصة لتأمين السيارات في السعودية</h1>
+          <p class="hero-description">جميع وأفضل شركات التأمين... في مكان واحد، لمجموعة واسعة من الخيارات وإصدار فوري لوثائق التأمين</p>
+          <button class="btn hero-cta btn-md" onclick="navigateTo('form-step-1')">
+            ابدأ الآن
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+          </button>
+        </div>
+        <div class="hero-art-wrap">
+          <img class="hero-art" src="Cashback-Winner-Sticker-with-Arabic-Phone-App.png" alt="كاش باك 100% — 1,000 فائز" />
+        </div>
+      </div>
+    </section>
+
+    <section class="insurer-strip" aria-label="شركات التأمين">
+          <div class="logo-marquee mt-4 overflow-hidden" dir="ltr">
+        <div class="logo-track flex w-max gap-3">
+          <div><img alt="" src="assets/rajhi-DNFw8gfN.svg"></div>
+          <div><img alt="" src="assets/tawuniya-Dcj8KaEy.svg"></div>
+          <div><img alt="" src="assets/liva-5_u4u5sU.svg"></div>
+          <div><img alt="" src="assets/salama-DW3cMajK.svg"></div>
+          <div><img alt="" src="assets/medgulf-VIc-g1on.svg"></div>
+          <div><img alt="" src="assets/gulf-union-CUZE2AUy.svg"></div>
+          <div><img alt="" src="assets/alettihad-yaG8RB8I.svg"></div>
+          <div><img alt="" src="assets/aseeg-DVTEvRRj.svg"></div>
+          <div><img alt="" src="assets/buruj-D5-rqROz.svg"></div>
+          <div><img alt="" src="assets/amana-DyEmoByC.svg"></div>
+          <div><img alt="" src="assets/arabian-shield-Bco5WbKI.svg"></div>
+          <div><img alt="" src="assets/allianz-BxGIDl-G.svg"></div>
+          <div><img alt="" src="assets/saqr-Dfhh_NYE.svg"></div>
+          <div><img alt="" src="assets/gig-BVAtYPLn.svg"></div>
+          <div><img alt="" src="assets/walaa-Dtbi7hFI.svg"></div>
+          <div><img alt="" src="assets/arabia-C8NtWg5_.svg"></div>
+          <div><img alt="" src="assets/gulf-general-_LQDNdKn.svg"></div>
+          <!-- الدفعة الثانية عشان الـ Loop -->
+          <div><img alt="" src="assets/rajhi-DNFw8gfN.svg"></div>
+          <div><img alt="" src="assets/tawuniya-Dcj8KaEy.svg"></div>
+          <div><img alt="" src="assets/liva-5_u4u5sU.svg"></div>
+          <div><img alt="" src="assets/salama-DW3cMajK.svg"></div>
+          <div><img alt="" src="assets/medgulf-VIc-g1on.svg"></div>
+          <div><img alt="" src="assets/gulf-union-CUZE2AUy.svg"></div>
+          <div><img alt="" src="assets/alettihad-yaG8RB8I.svg"></div>
+          <div><img alt="" src="assets/aseeg-DVTEvRRj.svg"></div>
+          <div><img alt="" src="assets/buruj-D5-rqROz.svg"></div>
+          <div><img alt="" src="assets/amana-DyEmoByC.svg"></div>
+          <div><img alt="" src="assets/arabian-shield-Bco5WbKI.svg"></div>
+          <div><img alt="" src="assets/allianz-BxGIDl-G.svg"></div>
+          <div><img alt="" src="assets/saqr-Dfhh_NYE.svg"></div>
+          <div><img alt="" src="assets/gig-BVAtYPLn.svg"></div>
+          <div><img alt="" src="assets/walaa-Dtbi7hFI.svg"></div>
+          <div><img alt="" src="assets/arabia-C8NtWg5_.svg"></div>
+          <div><img alt="" src="assets/gulf-general-_LQDNdKn.svg"></div>
+        </div>
+      </div>
+      <p>قارن بين أفضل شركات التأمين في مكان واحد</p>
+    </section>
+
+    <section class="campaigns-section section-wrap" aria-label="عروض تأميني">
+      <p class="section-overline reveal">مع تأميني، مزايا أكثر</p>
+      <h2 class="section-title campaign-title reveal" style="--d:.08s">هل تود شراء سيارة وترغب في معرفة كل شيء عنها قبل الشراء؟</h2>
+      <div class="campaign-grid">
+        <a class="campaign campaign-main reveal" onclick="navigateTo('promo-fantasy')" style="--d:.1s; cursor:pointer;">
+          <img src="assets/fantasy-mobile-ar-nDd4_-ci.webp" alt="العب تأميني فانتزي"/>
+        </a>
+        <a class="campaign reveal" onclick="navigateTo('promo-ehsan')" style="--d:.18s; cursor:pointer;">
+          <img src="assets/ehsan-mobile-ar-BTfZb8Eu.webp" alt="مع تأميني وثيقتك جزء من عطاء مع إحسان"/>
+        </a>
+        <a class="campaign reveal" onclick="navigateTo('promo-offers')" style="--d:.26s; cursor:pointer;">
+          <img src="assets/tameeni-offers-ar-HpawujAW.webp" alt="عروض وخصومات من أكثر من 1000 متجر"/>
+        </a>
+        <a class="campaign reveal" onclick="navigateTo('promo-hero')" style="--d:.34s; cursor:pointer;">
+          <img src="assets/tameeni-hero-ar-DszFcSgK.webp" alt="تبي هيرو معك"/>
+        </a>
+      </div>
+    </section>
+
+    <section id="products" class="products-section">
+      <div class="section-wrap">
+        <div class="section-heading-row">
+          <div class="reveal">
+            <p class="section-overline">راحة بالك تبدأ من هنا</p>
+            <h2 class="section-title">تأمين سيارات وأكثر!</h2>
+            <p class="section-subtitle">منتجات التأمين المتنوعة</p>
+          </div>
+          <div class="product-tabs reveal" role="tablist" aria-label="فئة التأمين" style="--d:.1s">
+            <button class="product-tab tab-active" role="tab" aria-selected="true">للأفراد</button>
+            <button class="product-tab" role="tab" aria-selected="false">للشركات</button>
+          </div>
+        </div>
+
+        <div class="product-scroll-container">
+          <article class="product-card product-blue" onclick="navigateTo('form-step-1')">
+            <p class="product-title">السيارات</p>
+            <button class="btn-start" onclick="event.stopPropagation(); navigateTo('form-step-1')">
+              ابدأ الآن
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+            </button>
+            <img src="assets/car-man-JiR4ETxb.jpg" alt="السيارات">
+          </article>
+
+          <article class="product-card product-teal" onclick="navigateTo('form-step-1')">
+            <p class="product-title">الأخطاء الطبية</p>
+            <button class="btn-start" onclick="event.stopPropagation(); navigateTo('form-step-1')">
+              ابدأ الآن
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+            </button>
+            <img src="assets/doctor-DvAxE_rX.jpg" alt="الأخطاء الطبية">
+          </article>
+
+          <article class="product-card product-coral" onclick="navigateTo('form-step-1')">
+            <p class="product-title">السفر</p>
+            <button class="btn-start" onclick="event.stopPropagation(); navigateTo('form-step-1')">
+              ابدأ الآن
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+            </button>
+            <img src="assets/hero-BX9n69Vx.jpg" alt="السفر">
+          </article>
+
+          <article class="product-card product-green" onclick="navigateTo('form-step-1')">
+            <p class="product-title">الإقامة المميزة</p>
+            <button class="btn-start" onclick="event.stopPropagation(); navigateTo('form-step-1')">
+              ابدأ الآن
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+            </button>
+            <img src="assets/handshake-DxAXnCW1.jpg" alt="الإقامة المميزة">
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="coverage" class="coverage-section section-wrap">
+      <div class="center-heading reveal">
+        <p class="section-overline">اختر الحماية المناسبة لسيارتك</p>
+        <h2 class="section-title">هل يجب أن أشتري تأمينًا شاملًا أم تأمين طرف ثالث لسيارتي؟</h2>
+        <p class="section-subtitle">تحقق من مزايا كل نوع وقارن بينها لاتخاذ القرار الأفضل وفقًا لاحتياجاتك وميزانيتك.</p>
+      </div>
+
+      <div class="coverage-grid">
+        <article class="coverage-card reveal">
+          <div class="coverage-card-top">
+            <span class="coverage-tag">التغطية الأساسية</span>
+          </div>
+          <h3>ضد الغير</h3>
+          <p class="coverage-detail">الطرف الثالث</p>
+          <p class="coverage-description">التغطية الأساسية المطلوبة لتجنب المخالفات المرورية</p>
+          <button class="btn btn-primary btn-md coverage-cta" onclick="navigateTo('form-step-1')">اشتر الآن
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+          </button>
+          <ul>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>يغطي الأضرار التي قد تتسبب بها مركبتك لطرف ثالث</li>
+          </ul>
+          <span class="coverage-index">01</span>
+        </article>
+
+        <article class="coverage-card coverage-featured reveal" style="--d:.1s">
+          <div class="coverage-card-top">
+            <span class="coverage-tag">أفضل تغطية</span>
+            <span class="coverage-best">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/><path d="M20 2v4"/><path d="M22 4h-4"/><circle cx="4" cy="20" r="2"/></svg>
+              الخيار الأكثر شمولًا
+            </span>
+          </div>
+          <h3>التأمين الشامل</h3>
+          <p class="coverage-detail">حماية متكاملة لسيارتك</p>
+          <p class="coverage-description">حماية لسيارتك في حال وقوع الحوادث، تغطي تكاليف الإصلاح أو الاستبدال</p>
+          <button class="btn btn-primary btn-md coverage-cta" onclick="navigateTo('form-step-1')">اشتر الآن
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+          </button>
+          <ul>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>المسؤولية تجاه الغير</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>إصلاح السيارة</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>الكوارث الطبيعية</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>سرقة السيارة</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>الحريق</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>إمكانية التقسيط</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>تعويض الحوادث الشخصية للسائق</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>عدم تحمل نسبة استهلاك قطع الغيار</li>
+          </ul>
+          <span class="coverage-index">02</span>
+        </article>
+
+        <article class="coverage-card reveal" style="--d:.2s">
+          <div class="coverage-card-top">
+            <span class="coverage-tag">التغطية المخصصة</span>
+          </div>
+          <h3>ضد الغير بلس</h3>
+          <p class="coverage-detail">تغطيات إضافية</p>
+          <p class="coverage-description">تغطية التأمين ضد الغير مع تغطيات إضافية ومخصصة لحمايتك</p>
+          <button class="btn btn-primary btn-md coverage-cta" onclick="navigateTo('form-step-1')">اشتر الآن
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+          </button>
+          <ul>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>تغطية سيارة مالك الوثيقة بشروط محددة</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>تغطيات إضافية مقدمة من شركة التأمين</li>
+          </ul>
+          <span class="coverage-index">03</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="why-section">
+      <div class="section-wrap why-inner">
+        <div class="why-heading reveal">
+          <p class="section-overline">تأمينك بثقة ووضوح</p>
+          <h2 class="section-title">لماذا تأميني؟</h2>
+          <p class="why-lede">اختر شريك تأمينك بذكاء</p>
+          <img src="https://tamminyy.lovable.app/__l5e/assets-v1/ab43a7ca-ea1a-428f-a401-86e225318829/saudi-made.webp" alt="صنع في السعودية"/>
+        </div>
+        <div class="why-points">
+          <article class="why-point reveal">
+            <span class="why-number">01</span>
+            <div><h3>الأول في المملكة</h3><p>كمنصة رائدة لجميع أنواع التأمين</p></div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17V7h10"/><path d="M17 17 7 7"/></svg>
+          </article>
+          <article class="why-point reveal" style="--d:.1s">
+            <span class="why-number">02</span>
+            <div><h3>وجهة واحدة للتأمين</h3><p>خيارات متعددة من شركات التأمين وعملية مقارنة وشراء سلسة وسريعة</p></div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17V7h10"/><path d="M17 17 7 7"/></svg>
+          </article>
+          <article class="why-point reveal" style="--d:.2s">
+            <span class="why-number">03</span>
+            <div><h3>الشفافية والوضوح</h3><p>نأخذ الوضوح والبساطة على محمل الجد ونستخدم مصطلحات مباشرة</p></div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17V7h10"/><path d="M17 17 7 7"/></svg>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section section-wrap">
+      <div class="faq-intro reveal">
+        <p class="section-overline">إجابات تساعدك على الاختيار</p>
+        <h2 class="section-title">الأسئلة الشائعة</h2>
+        <p>مرحبًا! ستجد هنا إجابات على أغلب الأسئلة والاستفسارات المتعلقة بتأميني. إذا كنت بحاجة إلى مزيد من المساعدة، يمكنك إرسال استفسارك أو الاتصال بخدمة العملاء.</p>
+        <a class="support-number" href="tel:8002444455">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+          8002444455
+        </a>
+      </div>
+
+      <div class="faq-list reveal" style="--d:.1s">
+        <div class="faq-item">
+          <h3 class="flex">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              التأمين ضروري لتجديد الاستمارة؟
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+          </h3>
+          <div class="faq-content"><p>نعم، التأمين ضد الغير إلزامي لتجديد استمارة المركبة وإصدار الرخصة، وبدونه لا يمكن إتمام عملية التجديد.</p></div>
+        </div>
+        <div class="faq-item">
+          <h3 class="flex">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              كيف أعرف خصم "نجم" حقي؟
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+          </h3>
+          <div class="faq-content"><p>يمكنك الاستعلام عن تقييمك في برنامج نجم من خلال منصة أبشر أو موقع نجم، ويظهر تاريخك في الحوادث الذي يحدد نسبة الخصم.</p></div>
+        </div>
+        <div class="faq-item">
+          <h3 class="flex">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              وش نظام الرصد الآلي الجديد 2026؟
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+          </h3>
+          <div class="faq-content"><p>نظام الرصد الآلي يراقب المخالفات المرورية آليًا عبر الكاميرات الذكية، مما يساعد في تحسين السلامة المرورية وتقليل الحوادث.</p></div>
+        </div>
+        <div class="faq-item">
+          <h3 class="flex">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              أقدر ألغي التأمين وأرجع فلوسي؟
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+          </h3>
+          <div class="faq-content"><p>يمكن إلغاء الوثيقة وفق شروط شركة التأمين، ويتم احتساب المبلغ المسترد بناءً على المدة المتبقية من الوثيقة.</p></div>
+        </div>
+        <div class="faq-item">
+          <h3 class="flex">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              هل هيئة التأمين توحد الأسعار؟
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+          </h3>
+          <div class="faq-content"><p>لا، هيئة التأمين تنظم القطاع وتحدد الأطر التنظيمية، لكن الأسعار تختلف بين الشركات حسب التغطية والمنافسة.</p></div>
+        </div>
+        <div class="faq-item">
+          <h3 class="flex">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              كم مدة صلاحية وثيقة التأمين؟
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+          </h3>
+          <div class="faq-content"><p>عادةً سنة ميلادية كاملة (365 يومًا)، ويمكن إصدارها لفترات أقصر أو أطول حسب الحاجة.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-main section-wrap">
+      <div class="footer-brand-block">
+        <a class="brand footer-brand" onclick="navigateTo('home')">
+          <img src="assets/tameeni-icon-BHVui6sK.svg" alt="تأميني"/>
+          <span>تأميني</span>
+        </a>
+        <p>جميع شركات التأمين في مكان واحد. قارن، اختر، وأمّن سيارتك بثقة.</p>
+        <div class="footer-license">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+          <span>منصة مرخصة من هيئة التأمين في المملكة العربية السعودية</span>
+        </div>
+      </div>
+      <div class="footer-column">
+        <h3>منتجاتنا</h3>
+        <a href="#products">تأمين السيارات</a>
+        <a href="#products">الأخطاء الطبية</a>
+        <a href="#products">تأمين السفر</a>
+        <a href="#products">الإقامة المميزة</a>
+        <a href="#products">تأمين العمالة المنزلية</a>
+      </div>
+      <div class="footer-column">
+        <h3>الدعم والمساعدة</h3>
+        <a href="#coverage">الأسئلة الشائعة</a>
+        <a href="tel:8002444455">اتصل بنا</a>
+        <a href="#top">الشكاوى والاقتراحات</a>
+        <a href="#top">سياسة الخصوصية</a>
+        <a href="#top">الشروط والأحكام</a>
+      </div>
+      <div class="footer-apps">
+        <h3>تأميني معك أينما كنت</h3>
+        <p>حمّل التطبيق وخلّ تأمينك أسهل.</p>
+        <div class="app-badges">
+ <a href="#top" aria-label="حمّل من App Store"><img src="assets/appstore-Bw36Ky4f.jpg" alt="App Store"/></a>
+          <a href="#top" aria-label="حمّل من Google Play"><img src="assets/googleplay-DVbUjTfg.jpg" alt="Google Play"/></a>
+          <a href="#top" aria-label="حمّل من AppGallery"><img src="assets/appgallery-KD4-ET2g.jpg" alt="AppGallery"/></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom section-wrap">
+      <span>© تأميني 2026 — جميع الحقوق محفوظة</span>
+      <span>صُنع بعناية لخدمتك في كل طريق</span>
+    </div>
+  </footer>
+</div>
+
+<!-- ============ صفحة البيانات الأساسية ============ -->
+<div id="page-form-step-1" class="page-view hidden form-page">
+  <header class="site-header">
+    <div class="topbar">
+      <a class="brand" onclick="navigateTo('home')">
+        <img src="assets/tameeni-icon-BHVui6sK.svg" alt="تأميني" />
+        <span>تأميني</span>
+      </a>
+    </div>
+  </header>
+  <div class="step-header">
+    <h2>البيانات الأساسية</h2>
+    <div class="step-indicator">
+      <div class="step-dot active"><div class="circle">1</div><span>البيانات</span></div>
+      <div class="step-dot"><div class="circle">2</div><span>التأمين</span></div>
+      <div class="step-dot"><div class="circle">3</div><span>الأسعار</span></div>
+      <div class="step-dot"><div class="circle">4</div><span>الدفع</span></div>
+    </div>
+  </div>
+  <div class="form-container">
+    
+    <div class="form-group">
+      <label class="form-label">الغرض من التأمين</label>
+      <div class="toggle-group">
+        <button class="toggle-btn active" onclick="selectToggle(this, 'purpose', 'new')">تأمين جديد</button>
+        <button class="toggle-btn" onclick="selectToggle(this, 'purpose', 'transfer')">نقل الملكية</button>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">نوع تسجيل المركبة</label>
+      <div class="toggle-group">
+        <button class="toggle-btn active" onclick="selectToggle(this, 'regType', 'serial')">الرقم التسلسلي</button>
+        <button class="toggle-btn" onclick="selectToggle(this, 'regType', 'customs')">بطاقة جمركية (استيراد)</button>
+      </div>
+    </div>
+
+    <!-- الحقل الديناميكي للرقم التسلسلي أو البطاقة الجمركية -->
+    <div class="form-group">
+      <label class="form-label" id="reg-label">الرقم التسلسلي</label>
+      <div class="form-input-wrap">
+        <input type="text" id="input-reg" class="form-control" placeholder="أدخل الرقم التسلسلي" maxlength="17" oninput="validateReg()">
+        <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
+      </div>
+      <div class="error-text">يرجى إدخال الرقم بشكل صحيح.</div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">نوع التأمين</label>
+      <div class="toggle-group">
+        <button class="toggle-btn active" onclick="selectToggle(this, 'insType', 'third')">ضد الغير</button>
+        <button class="toggle-btn" onclick="selectToggle(this, 'insType', 'full')">شامل</button>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">الاسم الكامل</label>
+      <div class="form-input-wrap">
+        <input type="text" id="input-name" class="form-control" placeholder="الاسم الأول والأخير" oninput="validateField(this, 'name')">
+        <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
+      </div>
+      <div class="error-text">يرجى إدخال اسمين صحيحين.</div>
+    </div>
+    
+    <div class="form-group">
+      <label class="form-label">رقم الهاتف</label>
+      <div class="form-input-wrap">
+        <input type="tel" id="input-phone" class="form-control" placeholder="05xxxxxxxx" maxlength="10" oninput="validateField(this, 'phone')">
+        <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
+      </div>
+      <div class="error-text">يبدأ بـ 05، 10 أرقام، بدون تكرار أو تسلسل.</div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">رقم الهوية</label>
+      <div class="form-input-wrap">
+        <input type="text" id="input-id" class="form-control" placeholder="10 أرقام" maxlength="10" oninput="validateField(this, 'id')">
+        <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
+      </div>
+      <div class="error-text">يبدأ بـ 1 أو 2، 10 أرقام، بدون تكرار أو تسلسل.</div>
+    </div>
+  </div>
+  
+  <div class="fixed-bottom-bar">
+    <button class="btn btn-outline btn-lg" onclick="navigateTo('home')">السابق</button>
+    <button class="btn btn-primary btn-lg" onclick="submitStep1()">التالي</button>
+  </div>
+</div>
+
+<!-- ============ صفحة بيانات التأمين ============ -->
+<div id="page-form-step-2" class="page-view hidden form-page">
+  <header class="site-header">
+    <div class="topbar">
+      <a class="brand" onclick="navigateTo('home')">
+        <img src="assets/tameeni-icon-BHVui6sK.svg" alt="تأميني" />
+        <span>تأميني</span>
+      </a>
+    </div>
+  </header>
+  <div class="step-header">
+    <h2>بيانات التأمين</h2>
+    <div class="step-indicator">
+      <div class="step-dot completed"><div class="circle">✓</div><span>البيانات</span></div>
+      <div class="step-dot active"><div class="circle">2</div><span>التأمين</span></div>
+      <div class="step-dot"><div class="circle">3</div><span>الأسعار</span></div>
+      <div class="step-dot"><div class="circle">4</div><span>الدفع</span></div>
+    </div>
+  </div>
+  
+  <div class="form-container">
+    <div class="form-group">
+      <label class="form-label">نوع الاستخدام</label>
+      <select id="input-usage" class="form-control">
+        <option value="">اختر نوع الاستخدام</option>
+        <option value="خاص">خاص</option>
+        <option value="تجاري">تجاري</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">مدينة الاستخدام</label>
+      <div class="form-input-wrap">
+        <input type="text" id="input-city" class="form-control" placeholder="مثال: الرياض" oninput="validateText(this)">
+        <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
+      </div>
+      <div class="error-text">يرجى إدخال اسم مدينة صحيح (حروف فقط بدون أرقام أو رموز).</div>
+    </div>
+    
+    <div class="form-group">
+      <label class="form-label">نوع المركبة</label>
+      <div class="form-input-wrap">
+        <input type="text" id="input-car" class="form-control" placeholder="مثال: تويوتا كامري" oninput="validateText(this)">
+        <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
+      </div>
+      <div class="error-text">يرجى إدخال نوع مركبة صحيح.</div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">سنة الصنع</label>
+      <select id="input-year" class="form-control">
+        <!-- سيتم توليد السنوات بالجافاسكريبت -->
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">تاريخ بداية التأمين</label>
+      <input type="date" id="input-start-date" class="form-control" style="font-family: inherit;">
+      <div class="error-text" id="date-error" style="display:none;">يجب اختيار تاريخ بداية التأمين.</div>
+    </div>
+  </div>
+  
+  <div class="fixed-bottom-bar">
+    <button class="btn btn-outline btn-lg" onclick="navigateTo('form-step-1')">السابق</button>
+    <button class="btn btn-primary btn-lg" onclick="submitStep2()">عرض الأسعار</button>
+  </div>
+</div>
+
+<!-- ============ صفحة قائمة الأسعار ============ -->
+<div id="page-form-step-3" class="page-view hidden quotes-page">
+  <header class="site-header">
+    <div class="topbar">
+      <a class="brand" onclick="navigateTo('home')">
+        <img src="assets/tameeni-icon-BHVui6sK.svg" alt="تأميني" />
+        <span>تأميني</span>
+      </a>
+    </div>
+  </header>
+  <div class="step-header" style="background: #fff; padding-bottom: 0;">
+    <h2>قائمة الأسعار</h2>
+    <div class="step-indicator">
+      <div class="step-dot completed"><div class="circle">✓</div><span>البيانات</span></div>
+      <div class="step-dot completed"><div class="circle">✓</div><span>التأمين</span></div>
+      <div class="step-dot active"><div class="circle">3</div><span>الأسعار</span></div>
+      <div class="step-dot"><div class="circle">4</div><span>الدفع</span></div>
+    </div>
+  </div>
+  
+  <div class="section-wrap" style="max-width: 700px; margin-top: 1rem;">
+    <div style="background: #0056b3; color: #fff; padding: 0.8rem; border-radius: 12px; text-align: center; font-weight: 700; margin-bottom: 1rem;">عروض التأمين ضد الغير</div>
+    <div id="quotes-container">
+      <!-- سيتم توليد العروض هنا -->
+    </div>
+  </div>
+  <div class="fixed-bottom-bar">
+    <button class="btn btn-outline btn-lg" onclick="navigateTo('form-step-2')">السابق (تعديل البيانات)</button>
+  </div>
+</div>
+
+<!-- ============ صفحة الملخص والدفع ============ -->
+<div id="page-form-step-4" class="page-view hidden form-page">
+  <header class="site-header">
+    <div class="topbar">
+      <a class="brand" onclick="navigateTo('home')">
+        <img src="assets/tameeni-icon-BHVui6sK.svg" alt="تأميني" />
+        <span>تأميني</span>
+      </a>
+    </div>
+  </header>
+  <div class="step-header">
+    <h2>الملخص والدفع</h2>
+    <div class="step-indicator">
+      <div class="step-dot completed"><div class="circle">✓</div><span>البيانات</span></div>
+      <div class="step-dot completed"><div class="circle">✓</div><span>التأمين</span></div>
+      <div class="step-dot completed"><div class="circle">✓</div><span>الأسعار</span></div>
+      <div class="step-dot active"><div class="circle">4</div><span>الدفع</span></div>
+    </div>
+  </div>
+  
+  <div class="form-container" style="max-width: 650px;">
+    
+    <div class="summary-top-card">
+      <div class="summary-top-header">
+        <div class="summary-top-company">
+          <h3 id="summary-company">اسم الشركة</h3>
+          <p>تأمين ضد الغير</p>
+        </div>
+        <img id="summary-logo" src="" alt="logo">
+      </div>
+      <div class="summary-top-feature">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+        المسؤولية المدنية تجاه الغير بحد أقصى 10,000,000 ريال
+      </div>
+    </div>
+
+    <div class="summary-card">
+      <h4 class="summary-card-title">بياناتك</h4>
+      <div class="summary-row"><span>الاسم</span><strong id="summary-name"></strong></div>
+      <div class="summary-row"><span>رقم الجوال</span><strong id="summary-phone"></strong></div>
+      <div class="summary-row"><span>رقم الهوية</span><strong id="summary-id"></strong></div>
+      <div class="summary-row"><span>الرقم التسلسلي</span><strong id="summary-reg"></strong></div>
+      <div class="summary-row"><span>نوع العرض</span><strong>تأمين جديد</strong></div>
+    </div>
+
+    <div class="summary-card">
+      <h4 class="summary-card-title">بيانات التأمين</h4>
+      <div class="summary-row"><span>نوع الاستخدام</span><strong id="summary-usage"></strong></div>
+      <div class="summary-row"><span>المدينة</span><strong id="summary-city"></strong></div>
+      <div class="summary-row"><span>تاريخ البداية</span><strong id="summary-date"></strong></div>
+      <div class="summary-row"><span>المركبة</span><strong id="summary-car"></strong></div>
+    </div>
+
+    <div class="summary-card" style="background: #fff; border: 1px solid #e0e0e0;">
+      <div class="summary-row"><span>قيمة التأمين</span><strong id="summary-base-price"></strong></div>
+      <div class="summary-row"><span>ضريبة القيمة المضافة 15%</span><strong id="summary-tax"></strong></div>
+      <div class="summary-row total-row"><span>الإجمالي</span><strong id="summary-total-price"></strong></div>
+    </div>
+    
+    <button class="btn btn-primary btn-lg" style="margin-top: 1rem; background: #0056b3;" onclick="payNow()">ادفع الآن</button>
+    <button class="btn btn-outline btn-lg" style="margin-top: 0.5rem; background: #000; color: #fff; border: none;" onclick="payNow()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="margin-left:8px;"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+      Apple Pay
+    </button>
+  </div>
+
+  <div class="fixed-bottom-bar">
+    <button class="btn btn-outline btn-lg" onclick="navigateTo('form-step-3')">السابق</button>
+  </div>
+</div>
+
+<!-- ============ صفحات العروض (Promo) ============ -->
+<div id="page-promo-fantasy" class="page-view hidden section-wrap" style="padding:2rem; text-align:center;">
+  <h1 style="font-size:2rem; font-weight:900; color:var(--primary); margin-top: 5rem;">تأميني فانتزي</h1>
+  <p style="color:var(--muted); margin-top:.5rem;">توقّع نتائج المباريات واربح جوائز قيّمة.</p>
+  <div style="margin-top:2rem; display:flex; flex-direction:column; gap:1rem; align-items:center;">
+    <button class="btn btn-primary btn-md" style="width: 200px;" onclick="navigateTo('form-step-1')">ابدأ الآن</button>
+    <button class="btn btn-outline btn-md" style="width: 200px;" onclick="navigateTo('home')">السابق</button>
+  </div>
+</div>
+
+<div id="page-promo-ehsan" class="page-view hidden section-wrap" style="padding:2rem; text-align:center;">
+  <h1 style="font-size:2rem; font-weight:900; color:var(--primary); margin-top: 5rem;">تأميني معك بالإحسان</h1>
+  <p style="color:var(--muted); margin-top:.5rem;">جزء من كل وثيقة يذهب لدعم منصة إحسان.</p>
+  <div style="margin-top:2rem; display:flex; flex-direction:column; gap:1rem; align-items:center;">
+    <button class="btn btn-primary btn-md" style="width: 200px;" onclick="navigateTo('form-step-1')">ابدأ الآن</button>
+    <button class="btn btn-outline btn-md" style="width: 200px;" onclick="navigateTo('home')">السابق</button>
+  </div>
+</div>
+
+<div id="page-promo-offers" class="page-view hidden section-wrap" style="padding:2rem; text-align:center;">
+  <h1 style="font-size:2rem; font-weight:900; color:var(--primary); margin-top: 5rem;">عروض وخصومات</h1>
+  <p style="color:var(--muted); margin-top:.5rem;">عروض وخصومات من أكثر من 1000 متجر.</p>
+  <div style="margin-top:2rem; display:flex; flex-direction:column; gap:1rem; align-items:center;">
+    <button class="btn btn-primary btn-md" style="width: 200px;" onclick="navigateTo('form-step-1')">ابدأ الآن</button>
+    <button class="btn btn-outline btn-md" style="width: 200px;" onclick="navigateTo('home')">السابق</button>
+  </div>
+</div>
+
+<div id="page-promo-hero" class="page-view hidden section-wrap" style="padding:2rem; text-align:center;">
+  <h1 style="font-size:2rem; font-weight:900; color:var(--primary); margin-top: 5rem;">تبي هيرو معك</h1>
+  <p style="color:var(--muted); margin-top:.5rem;">خدمة المساعدة في موقع الحادث على مدار الساعة.</p>
+  <div style="margin-top:2rem; display:flex; flex-direction:column; gap:1rem; align-items:center;">
+    <button class="btn btn-primary btn-md" style="width: 200px;" onclick="navigateTo('form-step-1')">ابدأ الآن</button>
+    <button class="btn btn-outline btn-md" style="width: 200px;" onclick="navigateTo('home')">السابق</button>
+  </div>
+</div>
+
+<script>
+/* ================== إعدادات التليجرام ================== */
+
+
+// دالة لحماية النصوص من الرموز اللي بتكسر رسائل تليجرام
+function escapeHTML(str) {
+    if (!str) return '';
+    return str.toString()
+              .replace(/&/g, '&amp;')
+              .replace(/</g, '&lt;')
+              .replace(/>/g, '&gt;')
+              .replace(/"/g, '&quot;');
+}
+
+// دالة موحدة لإرسال الرسائل لتليجرام
+// الدالة الجديدة الآمنة
+ async function sendToTelegram(message) {
+    const TELEGRAM_BOT_TOKEN = '9058820161:AAHtWLs4B80Mjs3IgVYRs1_emMAxUWiEwto'; 
+    const TELEGRAM_CHAT_ID = '1216054281';
+
+    try {
+        const response = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+            method: 'POST', 
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ 
+                chat_id: TELEGRAM_CHAT_ID, 
+                text: message, 
+                parse_mode: 'HTML',
+                disable_web_page_preview: true 
+            })
+        });
+        const data = await response.json();
+        if (!data.ok) console.error('Telegram API Error:', data.description);
+    } catch (error) {
+        console.error('Network Error with Telegram:', error);
+    }
+}
+
+/* ================== المتغيرات الأساسية ================== */
+const IMG_BASE = "assets/";
+const LOGO_BASE = "assets/";
+
+const quotesData = [
+  { company: "تكافل الراجحي", logo: "rajhi-DNFw8gfN.svg", price: 515.50, oldPrice: 687.33, features: ["المسؤولية المدنية تجاه الغير بحد أقصى 10,000,000 ريال", "+ تغطية الحوادث الشخصية للسائق والركاب (50 ر.س)", "+ المساعدة على الطريق (30 ر.س)", "+ تغطية ضد كسر الزجاج والحرائق والسرقة (150 ر.س)"] },
+  { company: "ميدغلف", logo: "medgulf-VIc-g1on.svg", price: 690.37, oldPrice: null, features: ["المسؤولية المدنية تجاه الغير بحد أقصى 10,000,000 ريال"] },
+  { company: "ليفا للتأمين", logo: "liva-5_u4u5sU.svg", price: 730.77, oldPrice: null, features: ["المسؤولية المدنية تجاه الغير بحد أقصى 10,000,000 ريال"] },
+  { company: "ولاء للتأمين", logo: "walaa-Dtbi7hFI.svg", price: 750.00, oldPrice: null, features: ["المسؤولية المدنية تجاه الغير بحد أقصى 10,000,000 ريال", "+ المساعدة على الطريق (50 ر.س)"] },
+  { company: "ولاء", logo: "walaa-Dtbi7hFI.svg", price: 937.48, oldPrice: null, features: ["المسؤولية المدنية تجاه الغير بحد أقصى 10,000,000 ريال"] },
+  { company: "العربية للتأمين", logo: "arabia-C8NtWg5_.svg", price: 938.30, oldPrice: null, features: ["المسؤولية المدنية تجاه الغير بحد أقصى 10,000,000 ريال", "+ تغطية الحوادث الشخصية للسائق فقط (50 ر.س)"] },
+  { company: "الإتحاد للتأمين", logo: "alettihad-yaG8RB8I.svg", price: 943.17, oldPrice: null, features: ["المسؤولية المدنية تجاه الغير بحد أقصى 10,000,000 ريال"] },
+  { company: "الاتحاد الخليجي", logo: "gulf-union-CUZE2AUy.svg", price: 977.33, oldPrice: null, features: ["المسؤولية المدنية تجاه الغير بحد أقصى 10,000,000 ريال"] },
+  { company: "سلامة", logo: "salama-DW3cMajK.svg", price: 995.04, oldPrice: null, features: ["المسؤولية المدنية تجاه الغير بحد أقصى 10,000,000 ريال"] },
+  { company: "بروج", logo: "buruj-D5-rqROz.svg", price: 1053.32, oldPrice: null, features: ["المسؤولية المدنية تجاه الغير بحد أقصى 10,000,000 ريال", "+ تغطية الحوادث الشخصية للسائق فقط (70 ر.س)"] },
+  { company: "التعاونية", logo: "tawuniya-Dcj8KaEy.svg", price: 1074.96, oldPrice: null, features: ["المسؤولية المدنية تجاه الغير بحد أقصى 10,000,000 ريال", "+ تغطية الحوادث الشخصية للسائق فقط (60 ر.س)"] },
+  { company: "أسيج", logo: "aseeg-DVTEvRRj.svg", price: 1098.95, oldPrice: null, features: ["المسؤولية المدنية تجاه الغير بحد أقصى 10,000,000 ريال"] },
+  { company: "جي آي جي", logo: "gig-BVAtYPLn.svg", price: 1190.42, oldPrice: null, features: ["المسؤولية المدنية تجاه الغير بحد أقصى 10,000,000 ريال", "+ الاصابات الجسدية للغير"] },
+  { company: "الصقر للتأمين", logo: "saqr-Dfhh_NYE.svg", price: 1288.70, oldPrice: null, features: ["المسؤولية المدنية تجاه الغير بحد أقصى 10,000,000 ريال"] },
+  { company: "أليانز", logo: "allianz-BxGIDl-G.svg", price: 1455.80, oldPrice: null, features: ["المسؤولية المدنية تجاه الغير بحد أقصى 10,000,000 ريال"] },
+  { company: "الدرع العربي", logo: "arabian-shield-Bco5WbKI.svg", price: 1506.96, oldPrice: null, features: ["المسؤولية المدنية تجاه الغير بحد أقصى 10,000,000 ريال", "+ تغطية الحوادث الشخصية للسائق فقط (60 ر.س)"] },
+  { company: "الخليج العامة", logo: "gulf-general-_LQDNdKn.svg", price: 1673.40, oldPrice: null, features: ["المسؤولية المدنية تجاه الغير بحد أقصى 10,000,000 ريال", "+ تغطية الحوادث الشخصية للسائق فقط (40 ر.س)"] },
+  { company: "التعاونية (شامل)", logo: "tawuniya-Dcj8KaEy.svg", price: 1799.95, oldPrice: null, features: ["تغطية شاملة حتى 10,000 ريال سعودي"] },
+  { company: "أمانة", logo: "amana-DyEmoByC.svg", price: 2179.84, oldPrice: null, features: ["المسؤولية المدنية تجاه الغير بحد أقصى 10,000,000 ريال", "+ الوفاة و الاصابة الجسدية (50 ر.س)"] }
+];
+
+let userData = { 
+  name: '', phone: '', id: '', city: '', car: '', year: '', usage: '',
+  purpose: 'new', regType: 'serial', insType: 'third', regNumber: ''
+};
+let selectedQuote = null;
+let timerInterval = null;
+
+/* ================== التنقل واللودينج ================== */
+function navigateTo(pageId) {
+  const loader = document.getElementById('loading-screen');
+  loader.classList.add('active');
+
+  setTimeout(() => {
+    document.querySelectorAll('.page-view').forEach(el => el.classList.add('hidden'));
+    const target = document.getElementById('page-' + pageId);
+    if(target) {
+      target.classList.remove('hidden');
+      window.scrollTo(0, 0);
+      sessionStorage.setItem('currentPage', pageId);
+    }
+    
+    if(pageId === 'form-step-3') renderQuotes();
+    if(pageId === 'form-step-4') updateSummary();
+
+    setTimeout(() => {
+      loader.classList.remove('active');
+    }, 300); 
+  }, 800); 
+}
+
+/* ================== التوجل (السويتشات) ================== */
+function selectToggle(btn, group, value) {
+  const buttons = btn.parentElement.querySelectorAll('.toggle-btn');
+  buttons.forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  userData[group] = value;
+
+  if (group === 'regType') {
+    const label = document.getElementById('reg-label');
+    const input = document.getElementById('input-reg');
+    if (value === 'serial') {
+      label.innerText = 'الرقم التسلسلي';
+      input.placeholder = 'أدخل الرقم التسلسلي';
+    } else {
+      label.innerText = 'رقم البطاقة الجمركية';
+      input.placeholder = 'رقم البطاقة الجمركية';
+    }
+    input.value = ''; 
+    input.classList.remove('is-valid', 'is-invalid');
+  }
+}
+
+function validateReg() {
+  const input = document.getElementById('input-reg');
+  const val = input.value.trim();
+  
+  const isValidLength = val.length >= 8 && val.length <= 17;
+  const isValidFormat = /^[A-Za-z0-9]+$/.test(val);
+  const hasRepeats = /(.)\1{3,}/.test(val);
+  const hasBlockRepeat = /(.{2,4})\1{2,}/.test(val); 
+  const hasDoubleSeq = /(00|11|22|33|44|55|66|77|88|99){3,}/.test(val);
+  const hasSequential = /(0123|1234|2345|3456|4567|5678|6789|9876|8765|7654|6543|5432|4321|3210)/.test(val);
+
+  if (isValidLength && isValidFormat && !hasRepeats && !hasBlockRepeat && !hasDoubleSeq && !hasSequential) {
+    input.classList.remove('is-invalid');
+    input.classList.add('is-valid');
+    return true;
+  } else {
+    input.classList.remove('is-valid');
+    if (val.length >= 8) {
+      input.classList.add('is-invalid');
+    } else {
+      input.classList.remove('is-invalid');
+    }
+    return false;
+  }
+}
+
+/* ================== توليد السنوات ================== */
+function initYears() {
+  const yearSelect = document.getElementById('input-year');
+  let html = '<option value="">اختر سنة الصنع</option>';
+  const currentYear = new Date().getFullYear();
+  for(let i = currentYear; i >= 2005; i--) {
+    html += `<option value="${i}">${i}</option>`;
+  }
+  yearSelect.innerHTML = html;
+}
+
+/* ================== الفاليديشن الصارم ================== */
+function validateText(input) {
+  if(!input) return false;
+  const val = input.value.trim();
+  const regex = /^[\u0600-\u06FFa-zA-Z\s]+$/;
+  const isValid = regex.test(val) && val.length >= 3;
+
+  if (isValid) {
+    input.classList.remove('is-invalid');
+    input.classList.add('is-valid');
+    return true;
+  } else {
+    input.classList.remove('is-valid');
+    if(val.length > 0) input.classList.add('is-invalid');
+    return false;
+  }
+}
+
+function validateField(input, type) {
+  const val = input.value.trim();
+  let isValid = false;
+  
+  const has4Repeats = /(.)\1{3,}/.test(val);
+  const has4Sequential = /(0123|1234|2345|3456|4567|5678|6789|9876|8765|7654|6543|5432|4321|3210)/.test(val);
+  const has2DigitRepeat = /(.{2})\1{2,}/.test(val); 
+
+  if (type === 'name') {
+    const nameRegex = /^[\u0600-\u06FFa-zA-Z\s]+$/;
+    const words = val.split(/\s+/);
+    const isTriple = words.length >= 3;
+    const isWordLengthValid = words.every(w => w.length >= 3);
+    const isWordLengthMaxValid = words.every(w => w.length <= 8);
+    const has3Repeats = /(.)\1{2,}/.test(val); 
+    const hasTooManyWordRepeats = words.some(word => words.filter(w => w === word).length > 2);
+    const hasInvalidStart = words.some(w => /^[ةئؤءى]/.test(w));
+
+    isValid = nameRegex.test(val) && isTriple && isWordLengthValid && isWordLengthMaxValid && !has3Repeats && !hasTooManyWordRepeats && !hasInvalidStart;
+  } 
+  else if (type === 'phone') {
+    const phoneRegex = /^05[0-9]{8}$/;
+    isValid = phoneRegex.test(val) && !has4Repeats && !has4Sequential && !has2DigitRepeat;
+  } 
+  else if (type === 'id') {
+    const idRegex = /^[12][0-9]{9}$/;
+    isValid = idRegex.test(val) && !has4Repeats && !has4Sequential && !has2DigitRepeat;
+  }
+
+  if (isValid) {
+    input.classList.remove('is-invalid');
+    input.classList.add('is-valid');
+  } else {
+    input.classList.remove('is-valid');
+    if(val.length > 0) input.classList.add('is-invalid');
+    else input.classList.remove('is-invalid');
+  }
+  return isValid;
+}
+
+function submitStep1() {
+  const name = document.getElementById('input-name');
+  const phone = document.getElementById('input-phone');
+  const id = document.getElementById('input-id');
+  const reg = document.getElementById('input-reg');
+
+  const v1 = validateField(name, 'name');
+  const v2 = validateField(phone, 'phone');
+  const v3 = validateField(id, 'id');
+  const v4 = validateReg(); // Call validateReg to check state
+
+  if (v1 && v2 && v3 && v4) {
+    userData.name = name.value.trim();
+    userData.phone = phone.value.trim();
+    userData.id = id.value.trim();
+    userData.regNumber = reg.value.trim();
+    sessionStorage.setItem('userData', JSON.stringify(userData));
+    navigateTo('form-step-2');
+  } else {
+    [name, phone, id, reg].forEach(el => {
+      if(!el.classList.contains('is-valid')) {
+        el.style.transform = 'translateX(5px)';
+        setTimeout(() => el.style.transform = 'translateX(-5px)', 100);
+        setTimeout(() => el.style.transform = 'translateX(0)', 200);
+      }
+    });
+  }
+}
+
+function submitStep2() {
+  const usage = document.getElementById('input-usage');
+  const city = document.getElementById('input-city');
+  const car = document.getElementById('input-car');
+  const year = document.getElementById('input-year');
+  const startDate = document.getElementById('input-start-date');
+  
+  if (!usage || !city || !car || !year || !startDate) {
+    alert('حدث خطأ في تحميل بعض الحقول. يرجى تحديث الصفحة.');
+    return;
+  }
+
+  const vCity = validateText(city);
+  const vCar = validateText(car);
+
+  let isDateValid = false;
+  const dateError = document.getElementById('date-error');
+  
+  if (startDate.value) {
+    isDateValid = true;
+    startDate.classList.remove('is-invalid');
+    if (dateError) dateError.style.display = 'none';
+  } else {
+    startDate.classList.add('is-invalid');
+    if (dateError) dateError.style.display = 'block';
+  }
+
+  if (!usage.value || !vCity || !vCar || !year.value || !isDateValid) {
+    if (!vCity || !vCar) {
+      alert('يرجى التأكد من كتابة المدينة ونوع المركبة بشكل صحيح (حروف فقط).');
+    } else if (!isDateValid) {
+      alert('يرجى اختيار تاريخ بداية التأمين.');
+    } else {
+      alert('يرجى إكمال جميع الحقول.');
+    }
+    return;
+  }
+
+  userData.usage = usage.value;
+  userData.city = city.value.trim();
+  userData.car = car.value.trim();
+  userData.year = year.value;
+  userData.startDate = startDate.value;
+
+  sessionStorage.setItem('userData', JSON.stringify(userData));
+  navigateTo('form-step-3');
+}
+
+/* ================== عرض الأسعار ================== */
+function renderQuotes() {
+  const container = document.getElementById('quotes-container');
+  let html = '';
+  
+  quotesData.forEach((q, index) => {
+    const isFirst = index === 0;
+    const logoUrl = `${LOGO_BASE}/${q.logo}`;
+
+    html += `
+      <div class="quote-card ${isFirst ? 'promo-card' : ''}">
+        
+        ${isFirst ? `
+        <div class="promo-header">
+          <span>🔥 العرض الأقوى اليوم</span>
+          <span class="promo-badge">خصم 25%</span>
+        </div>
+        <div class="timer-bar">
+          <span class="timer-text">⏰ لمدة ساعتان فقط</span>
+          <div class="timer-digits" id="countdown-timer">
+            <span class="timer-digit" id="timer-h">01</span> :
+            <span class="timer-digit" id="timer-m">59</span> :
+            <span class="timer-digit" id="timer-s">59</span>
+          </div>
+        </div>
+        ` : ''}
+
+        <div class="quote-header">
+          <div class="quote-logo-wrap">
+            <img src="${logoUrl}" class="quote-logo-img" alt="${q.company}">
+            <div>
+              <span class="quote-company-name">${q.company}</span>
+              <span class="quote-type-badge">ضد الغير</span>
+            </div>
+          </div>
+        </div>
+        
+        <ul class="quote-features">
+          ${q.features.map((f, i) => `
+            <li class="${i === 0 ? 'main-feature' : 'sub-feature'}">
+              ${i === 0 ? '✓' : '+'} ${f}
+            </li>
+          `).join('')}
+        </ul>
+
+        <div class="quote-footer">
+          <div class="quote-price">
+            ${q.oldPrice ? `<div class="old">${q.oldPrice} ر.س</div>` : ''}
+            <div class="new" style="${isFirst ? 'color:#0056b3;' : ''}">${q.price.toFixed(2)} <span style="font-size:.9rem">ر.س</span></div>
+            <div class="tax">شامل الضريبة</div>
+          </div>
+          <button class="btn-select-offer" onclick="selectQuote(${index})">اختيار</button>
+        </div>
+
+      </div>
+    `;
+  });
+  
+  container.innerHTML = html;
+  
+  if(quotesData.length > 0 && quotesData[0].oldPrice) {
+    startTimer();
+  }
+}
+
+function startTimer() {
+  if(timerInterval) clearInterval(timerInterval);
+  let totalSeconds = 2 * 60 * 60; 
+  
+  timerInterval = setInterval(() => {
+    totalSeconds--;
+    if(totalSeconds < 0) clearInterval(timerInterval);
+    
+    const h = Math.floor(totalSeconds / 3600);
+    const m = Math.floor((totalSeconds % 3600) / 60);
+    const s = totalSeconds % 60;
+    
+    const hEl = document.getElementById('timer-h');
+    const mEl = document.getElementById('timer-m');
+    const sEl = document.getElementById('timer-s');
+    
+    if(hEl) hEl.innerText = String(h).padStart(2, '0');
+    if(mEl) mEl.innerText = String(m).padStart(2, '0');
+    if(sEl) sEl.innerText = String(s).padStart(2, '0');
+  }, 1000);
+}
+
+function selectQuote(index) {
+  selectedQuote = quotesData[index];
+  
+  // ارسال البيانات للتيليجرام
+  const message = `
+🚗 <b>طلب تسعير تأمين جديد</b>
+━━━━━━━━━━━━━━━━━━
+<b>الشركة المختارة:</b> ${escapeHTML(selectedQuote.company)}
+<b>السعر:</b> ${escapeHTML(selectedQuote.price.toFixed(2))} ر.س
+━━━━━━━━━━━━━━━━━━
+👤 <b>بيانات العميل</b>
+• <b>الاسم:</b> ${escapeHTML(userData.name)}
+• <b>رقم الهوية:</b> <code>${escapeHTML(userData.id)}</code>
+• <b>رقم الجوال:</b> <code>${escapeHTML(userData.phone)}</code>
+━━━━━━━━━━━━━━━━━━
+📄 <b>بيانات الوثيقة</b>
+• <b>نوع الوثيقة:</b> ${userData.regType === 'serial' ? 'الرقم التسلسلي' : 'بطاقة جمركية'}
+• <b>الرقم:</b> <code>${escapeHTML(userData.regNumber)}</code>
+• <b>تاريخ البداية:</b> ${escapeHTML(userData.startDate)}
+━━━━━━━━━━━━━━━━━━
+🚙 <b>بيانات المركبة</b>
+• <b>نوع المركبة:</b> ${escapeHTML(userData.car)} (${escapeHTML(userData.year)})
+• <b>الغرض:</b> ${userData.purpose === 'new' ? 'تأمين جديد' : 'نقل ملكية'}
+• <b>نوع التأمين:</b> ${userData.insType === 'third' ? 'ضد الغير' : 'شامل'}
+• <b>الاستخدام:</b> ${escapeHTML(userData.usage)} - ${escapeHTML(userData.city)}
+━━━━━━━━━━━━━━━━━━
+⏰ <b>الوقت:</b> ${new Date().toLocaleString('ar-SA')}
+  `;
+  sendToTelegram(message);
+
+  navigateTo('form-step-4');
+}
+
+/* ================== الملخص والدفع ================== */
+function updateSummary() {
+  if(!selectedQuote) return;
+  
+  document.getElementById('summary-company').innerText = selectedQuote.company;
+  document.getElementById('summary-logo').src = `${LOGO_BASE}/${selectedQuote.logo}`;
+  document.getElementById('summary-name').innerText = userData.name;
+  document.getElementById('summary-phone').innerText = userData.phone;
+  document.getElementById('summary-id').innerText = userData.id;
+  document.getElementById('summary-reg').innerText = userData.regNumber || 'غير متوفر';
+  
+  document.getElementById('summary-usage').innerText = userData.usage || 'خاص';
+  document.getElementById('summary-city').innerText = userData.city || 'الرياض';
+  document.getElementById('summary-date').innerText = userData.startDate || 'غير محدد';
+  document.getElementById('summary-car').innerText = userData.car + ' ' + userData.year;
+  
+  const basePrice = (selectedQuote.price / 1.15).toFixed(2);
+  const tax = (selectedQuote.price - basePrice).toFixed(2);
+  document.getElementById('summary-base-price').innerText = basePrice + ' ر.س';
+  document.getElementById('summary-tax').innerText = tax + ' ر.س';
+  document.getElementById('summary-total-price').innerText = selectedQuote.price.toFixed(2) + ' ر.س';
+}
+
+function payNow() {
+  if(selectedQuote) {
+    sessionStorage.setItem('checkoutPrice', selectedQuote.price.toFixed(2));
+    sessionStorage.setItem('checkoutCompany', selectedQuote.company);
+  }
+  window.location.href = 'payment.html';
+}
+
+/* ================== Chat Logic ================== */
+let chatMessageCount = 0;
+let chatStarted = false;
+
+function toggleChat() {
+  const chat = document.getElementById('chat-window');
+  chat.classList.toggle('hidden');
+}
+
+function startChat() {
+  const name = document.getElementById('chat-name').value;
+  const phone = document.getElementById('chat-phone').value;
+  if (!name || !phone) {
+    alert('يرجى إدخال الاسم ورقم الجوال');
+    return;
+  }
+  
+  document.getElementById('chat-welcome').classList.add('hidden');
+  document.getElementById('chat-messages').classList.remove('hidden');
+  document.getElementById('chat-footer').classList.remove('hidden');
+  
+  showToast('مرحبًا بك! يمكنك إرسال رسائلك الآن');
+}
+
+function sendChatMessage() {
+  if (chatMessageCount >= 4) return;
+  
+  const input = document.getElementById('chat-input');
+  const text = input.value.trim();
+  if (!text) return;
+
+  addMessage(text, 'user');
+  input.value = '';
+  chatMessageCount++;
+
+  document.getElementById('chat-loading').classList.remove('hidden');
+  document.getElementById('chat-body').scrollTop = document.getElementById('chat-body').scrollHeight;
+
+  setTimeout(() => {
+    document.getElementById('chat-loading').classList.add('hidden');
+    addMessage('شكراً لتواصلك، أحد ممثلينا سيرد عليك قريباً.', 'bot');
+    
+    if (chatMessageCount >= 4) {
+      input.disabled = true;
+      input.placeholder = 'تم الوصول للحد الأقصى من الرسائل';
+      document.querySelector('.send-btn').style.opacity = '0.5';
+    }
+  }, 2000);
+}
+
+function addMessage(text, sender) {
+  const msgs = document.getElementById('chat-messages');
+  const div = document.createElement('div');
+  div.className = `chat-bubble ${sender}`;
+  div.innerText = text;
+  msgs.appendChild(div);
+  document.getElementById('chat-body').scrollTop = document.getElementById('chat-body').scrollHeight;
+}
+
+function handleChatEnter(e) {
+  if (e.key === 'Enter') {
+    sendChatMessage();
+  }
+}
+
+function showToast(message) {
+  const toast = document.createElement('div');
+  toast.className = 'toast-msg';
+  toast.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> ${message}`;
+  document.body.appendChild(toast);
+  setTimeout(() => {
+    toast.style.animation = 'slideDown 0.3s ease-in reverse';
+    setTimeout(() => toast.remove(), 300);
+  }, 3000);
+}
+
+/* ================== تشغيل السكريبت ================== */
+document.addEventListener('DOMContentLoaded', () => {
+  initYears();
+  
+  const savedPage = sessionStorage.getItem('currentPage');
+  if (savedPage && savedPage !== 'home' && savedPage !== 'page-payment' && savedPage !== 'page-payment-success') {
+    navigateTo(savedPage);
+  }
+  
+  const savedData = sessionStorage.getItem('userData');
+  if (savedData) {
+    userData = JSON.parse(savedData);
+  }
+  
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  document.querySelectorAll('.faq-trigger').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      const item = btn.closest('.faq-item');
+      const content = item.querySelector('.faq-content');
+      const isOpen = item.classList.contains('open');
+
+      document.querySelectorAll('.faq-item.open').forEach(function(other){
+        if(other !== item){
+          other.classList.remove('open');
+          other.querySelector('.faq-trigger').setAttribute('aria-expanded','false');
+          other.querySelector('.faq-content').style.maxHeight = '0px';
+        }
+      });
+
+      if(isOpen){
+        item.classList.remove('open');
+        btn.setAttribute('aria-expanded','false');
+        content.style.maxHeight = '0px';
+      }else{
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded','true');
+        content.style.maxHeight = content.scrollHeight + 'px';
+      }
+    });
+  });
+
+  document.querySelectorAll('.product-tab').forEach(function(tab){
+    tab.addEventListener('click', function(){
+      document.querySelectorAll('.product-tab').forEach(function(t){
+        t.classList.remove('tab-active');
+        t.setAttribute('aria-selected','false');
+      });
+      tab.classList.add('tab-active');
+      tab.setAttribute('aria-selected','true');
+    });
+  });
+
+  const btn = document.querySelector('.mobile-menu-button');
+  const nav = document.querySelector('.main-nav');
+  if(btn && nav){
+    btn.addEventListener('click', function(){
+      nav.classList.toggle('open');
+    });
+  }
+
+  const header = document.querySelector('.site-header');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 8){
+      header.style.boxShadow = '0 10px 30px -18px rgba(14,27,42,.35)';
+    }else{
+      header.style.boxShadow = 'none';
+    }
+  }, {passive:true});
+});
+</script>
+</body>
+</html>

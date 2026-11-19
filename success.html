@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>تم الدفع بنجاح | تأميني</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Tajawal', sans-serif; }
+  body { background: #f7f9fc; display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 2rem; }
+  
+  .success-container { background: #fff; padding: 3rem 2rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); width: 100%; max-width: 450px; text-align: center; }
+  
+  .payment-loader { width: 60px; height: 60px; border: 5px solid #e0eaff; border-top-color: #0056b3; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto; }
+  @keyframes spin { 100% { transform: rotate(360deg); } }
+  
+  .success-icon { width: 80px; height: 80px; background: #dcfce7; color: #16a34a; border-radius: 50%; display: grid; place-items: center; margin: 0 auto 1.5rem; animation: scaleIn 0.5s ease-out; }
+  @keyframes scaleIn { 0% { transform: scale(0); } 100% { transform: scale(1); } }
+  .success-icon svg { width: 40px; height: 40px; }
+  
+  .btn-home { display: inline-block; padding: 1rem 2rem; background: #0056b3; color: #fff; text-decoration: none; border-radius: 8px; font-weight: 700; margin-top: 1rem; transition: background 0.2s; }
+  .btn-home:hover { background: #004494; }
+</style>
+</head>
+<body>
+
+  <div class="success-container">
+    <div id="loading-screen">
+      <div class="payment-loader"></div>
+      <h2 id="loading-text" style="margin-top: 1.5rem; color: #0056b3;">جاري تأكيد حالة الدفع...</h2>
+    </div>
+
+    <div id="success-screen" style="display: none;">
+      <div class="success-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+      </div>
+      <h2 style="color: #16a34a; margin-bottom: 0.5rem; font-size: 1.5rem;">تم الدفع بنجاح!</h2>
+      <p style="color: #5b6b7c; font-size: 1rem; margin-bottom: 2rem;">سيتم التواصل معك بواسطه أحد ممثلين الشركة قريباً.</p>
+      <a href="index.html" class="btn-home">العودة للرئيسية</a>
+    </div>
+  </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const loadingText = document.getElementById('loading-text');
+    const loadingScreen = document.getElementById('loading-screen');
+    const successScreen = document.getElementById('success-screen');
+
+    setTimeout(() => {
+      loadingText.innerText = 'جاري مراجعة الطلب...';
+      
+      setTimeout(() => {
+        loadingScreen.style.display = 'none';
+        successScreen.style.display = 'block';
+        
+        sessionStorage.removeItem('checkoutPrice');
+        sessionStorage.removeItem('checkoutCompany');
+        sessionStorage.removeItem('currentPage');
+        sessionStorage.removeItem('userData');
+      }, 3000);
+      
+    }, 10000);
+  });
+</script>
+</body>
+</html>

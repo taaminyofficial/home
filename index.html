@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>تأميني | اختر ما يناسبك</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet" />
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Tajawal', sans-serif; }
+  body { 
+    background: #fff; 
+    display: flex; 
+    justify-content: center; 
+    align-items: flex-start; 
+    min-height: 100vh; 
+    padding: 2rem 1rem; 
+  }
+
+  .container {
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  /* تصميم الأزرار */
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0.9rem 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    overflow: hidden;
+    border: 1.5px solid #1a73e8;
+  }
+
+  /* زر مفرغ (أبيض بحدود زرقاء) */
+  .btn-outline {
+    background: #fff;
+    color: #1a73e8;
+  }
+
+  /* زر ممتلئ (أزرق) */
+  .btn-solid {
+    background: #0d5b8b; /* درجة الأزرق الغامق في الصورة */
+    color: #fff;
+    border-color: #0d5b8b;
+    box-shadow: 0 4px 10px rgba(13, 91, 139, 0.2);
+  }
+
+  /* التأثيرات الحيوية (Lively Effects) */
+  .btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.4s ease-out;
+    pointer-events: none;
+  }
+
+  .btn:hover {
+    transform: translateY(-3px) scale(1.02);
+  }
+
+  .btn-outline:hover {
+    background: #f0f7ff;
+    box-shadow: 0 6px 15px rgba(26, 115, 232, 0.15);
+  }
+
+  .btn-solid:hover {
+    background: #0a466b;
+    box-shadow: 0 8px 20px rgba(13, 91, 139, 0.4);
+  }
+
+  .btn:active {
+    transform: translateY(-1px) scale(0.98);
+  }
+
+  .btn:active::after {
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 0s;
+  }
+
+  /* حاوية الصورة */
+  .image-wrapper {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    display: block; /* ضفنا ده عشان اللينك يلف الصورة صح */
+  }
+
+  .image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  .image-wrapper:hover img {
+    transform: scale(1.03);
+  }
+
+  /* حركة نبض خفيفة للزر الممتلئ عشان يلفت الانتباه */
+  @keyframes pulseBtn {
+    0% { box-shadow: 0 0 0 0 rgba(13, 91, 139, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(13, 91, 139, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(13, 91, 139, 0); }
+  }
+  
+  .btn-pulse {
+    animation: pulseBtn 2.5s infinite;
+  }
+
+</style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- الزر الأول -->
+    <a href="plans.html" class="btn btn-outline">الحصول على افضل العروض</a>
+    
+    <!-- الزر الثاني -->
+    <a href="plans.html" class="btn btn-solid btn-pulse">شراء وثيقه تأمين جديده</a>
+
+    <!-- الصورة (تم تحويلها لرابط) -->
+    <a href="plans.html" class="image-wrapper">
+      <img src="landing.png" alt="تأميني معك">
+    </a>
+
+    <!-- الزر الثالث -->
+    <a href="plans.html" class="btn btn-outline">تامين شامل</a>
+
+    <!-- الزر الرابع -->
+    <a href="plans.html" class="btn btn-solid">تأمين ضد الغير</a>
+  </div>
+
+</body>
+</html>
